@@ -16,7 +16,6 @@ func start_timer():
 	started = true
 	toggle_active()
 
-
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
@@ -26,7 +25,10 @@ func toggle_active():
 	active = not active		# TODO: change sprite
 	if active:
 		print("timer started")
+		self.hide()
 		get_node("Timer").start()
+	else:
+		self.show()
 
 func _on_collision():
 	print("collision")

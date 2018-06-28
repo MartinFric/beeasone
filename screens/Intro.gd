@@ -16,4 +16,4 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://screens/MainMenu.tscn")
+	get_tree().change_scene("res://levels/Level1CollectingNectar.tscn")
