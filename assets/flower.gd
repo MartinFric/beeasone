@@ -2,6 +2,7 @@ extends StaticBody2D
 
 # class member variables go here, for example:
 var started = false
+var active = false
 var stopped = false
 
 func _ready():
