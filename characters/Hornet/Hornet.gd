@@ -1,13 +1,13 @@
-extends Node
+extends RigidBody2D
 
 # class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+export (int) var MIN_SPEED # minimum speed range
+export (int) var MAX_SPEED # maximum speed range
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	get_node("Timer").start()
+	pass
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -15,5 +15,5 @@ func _ready():
 #	pass
 
 
-func _on_Timer_timeout():
-	get_tree().change_scene("res://levels/Level1CollectingNectar.tscn")
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
