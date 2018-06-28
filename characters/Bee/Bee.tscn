@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://characters/Bee/Bee.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Bee/up1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Bee/up2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Bee/right1.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Bee/right2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Bee/up1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Bee/up2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Bee/right1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Bee/right2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -19,6 +19,7 @@ animations = [ {
 "name": "Right",
 "speed": 5.0
 } ]
+_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="CapsuleShape2D" id=2]
 
@@ -26,33 +27,27 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 20.0
 
-[node name="Bee" type="Area2D" index="0"]
+[node name="Bee" type="KinematicBody2D" index="0"]
 
-position = Vector2( 994.432, 531.634 )
-scale = Vector2( 9.21214, 4.25456 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
+scale = Vector2( 0.1, 0.1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
 script = ExtResource( 1 )
-SPEED = 400
+_sections_unfolded = [ "Transform", "Visibility" ]
+SPEED = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 0.986048, 19.8344 )
-scale = Vector2( 0.111666, 0.246726 )
 frames = SubResource( 1 )
 animation = "Top"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 1.17462, 22.2414 )
-scale = Vector2( 1.25306, 1.55221 )
+position = Vector2( -1.45295, 7.21375 )
+scale = Vector2( 4.82572, 5.87289 )
 shape = SubResource( 2 )
-
-[connection signal="body_entered" from="." to="." method="_on_Bee_body_entered"]
 
 

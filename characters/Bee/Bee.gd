@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 # class member variables go here, for example:
 export (int) var SPEED  # how fast the player will move (pixels/sec)
