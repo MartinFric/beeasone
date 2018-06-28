@@ -1,11 +1,52 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="bee" type="Node" index="0"]
+[ext_resource path="res://Bee.gd" type="Script" id=1]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "Top",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Right",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[node name="Bee" type="Area2D" index="0"]
+
+position = Vector2( 994.432, 531.634 )
+scale = Vector2( 9.21214, 4.25456 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+SPEED = 400
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
-animation = "default"
+position = Vector2( 0.417267, 21.8469 )
+scale = Vector2( 0.0252289, 0.0898421 )
+frames = SubResource( 1 )
+animation = "Top"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 1.17462, 22.2414 )
+scale = Vector2( 1.25306, 1.55221 )
+shape = SubResource( 2 )
 
 
