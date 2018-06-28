@@ -25,4 +25,6 @@ visible = false
 
 [node name="Bee" parent="." index="3" instance=ExtResource( 5 )]
 
+position = Vector2( 1301.16, 513.457 )
+
 
