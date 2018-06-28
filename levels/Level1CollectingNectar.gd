@@ -6,9 +6,10 @@ var objectivePopupMenu
 var nectarCollected = 0
 
 func _ready():
-	objectivePopupMenu = get_node("ObjectiveFlowersPopup")
-	objectivePopupMenu.connect("hidden", self, "on_objectives_read")
-	objectivePopupMenu.show()
+	#objectivePopupMenu = get_node("ObjectiveFlowersPopup")
+	#objectivePopupMenu.connect("hidden", self, "on_objectives_read")
+	#objectivePopupMenu.show()
+	pass
 
 func on_objectives_read():
 	print("objectives read")

@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://styles/MainPanelStyleBox.tres" type="StyleBox" id=2]
 [ext_resource path="res://assets/menubuttontheme.tres" type="Theme" id=3]
 [ext_resource path="res://fonts/orangeFont.tres" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/beeasone_logo_main.png" type="Texture" id=5]
+[ext_resource path="res://assets/queen.png" type="Texture" id=6]
+[ext_resource path="res://assets/title.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFontData" id=4]
+[sub_resource type="DynamicFontData" id=1]
 
 hinting = 2
 font_path = "res://fonts/orange juice 2.0.ttf"
@@ -16,10 +18,10 @@ font_path = "res://fonts/orange juice 2.0.ttf"
 size = 32
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 4 )
+font_data = SubResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 
 size = 32
 use_mipmaps = false
@@ -27,7 +29,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 
 size = 32
 use_mipmaps = false
@@ -138,7 +140,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 3 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.910156, 0.589235, 0.135101, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -167,7 +169,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 0.589216, 0.135098, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -180,8 +182,20 @@ _sections_unfolded = [ "Margin", "Rect", "Theme", "custom_colors", "custom_fonts
 
 [node name="beeasone_logo_main" type="Sprite" parent="Panel" index="1"]
 
-position = Vector2( 1626.57, 275.482 )
+position = Vector2( 1637.78, 352.095 )
 texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Panel" index="2"]
+
+position = Vector2( 261.249, 283.956 )
+scale = Vector2( 0.738382, 1.11845 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Panel" index="3"]
+
+position = Vector2( 953.317, 218.464 )
+scale = Vector2( 1.76702, 2.01636 )
+texture = ExtResource( 7 )
 
 [connection signal="pressed" from="Panel/Container/exit" to="." method="_on_exit_pressed"]
 

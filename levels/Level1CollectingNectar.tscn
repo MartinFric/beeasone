@@ -1,28 +1,25 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://levels/Level1CollectingNectar.gd" type="Script" id=1]
-[ext_resource path="res://screens/TopBar.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/flower.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/ObjectivesFlowersPopup.tscn" type="PackedScene" id=4]
-[ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/flower.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/ObjectivesFlowersPopup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=4]
+[ext_resource path="res://screens/TopLeftMenu.tscn" type="PackedScene" id=5]
 
 [node name="Level1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="MarginContainer" parent="." index="0" instance=ExtResource( 2 )]
-
-margin_right = 561.0
-margin_bottom = 226.0
-
-[node name="Flower" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Flower" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 696.732, 629.043 )
 
-[node name="ObjectiveFlowersPopup" parent="." index="2" instance=ExtResource( 4 )]
+[node name="ObjectiveFlowersPopup" parent="." index="1" instance=ExtResource( 3 )]
 
 visible = false
 
-[node name="Bee" parent="." index="3" instance=ExtResource( 5 )]
+[node name="Bee" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="Container" parent="." index="3" instance=ExtResource( 5 )]
 
 
