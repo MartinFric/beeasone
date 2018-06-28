@@ -15,4 +15,4 @@ func _ready():
 #	pass
 
 func _on_new_game_pressed():
-	get_tree().change_scene("res://Intro.tscn");
+	get_tree().change_scene("res://screens/Intro.tscn")

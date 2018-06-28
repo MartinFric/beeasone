@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://levels/Level1CollectingNectar.gd" type="Script" id=1]
-[ext_resource path="res://TopBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://screens/TopBar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/flower.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/ObjectivesFlowersPopup.tscn" type="PackedScene" id=4]
+
 
 [node name="Level1" type="Node" index="0"]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/beeasone_logo_main.png-c87143772a7ae8e30e27496bed0017b2.stex"
+path="res://.import/beeasone_logo_small.png-174d762c235ce647874602e256ba8a34.stex"
 
 [deps]
 
-source_file="res://beeasone_logo_main.png"
-dest_files=[ "res://.import/beeasone_logo_main.png-c87143772a7ae8e30e27496bed0017b2.stex" ]
+source_file="res://assets/beeasone_logo_small.png"
+dest_files=[ "res://.import/beeasone_logo_small.png-174d762c235ce647874602e256ba8a34.stex" ]
 
 [params]
 
