@@ -13,17 +13,23 @@ func _ready():
 	add_to_group("flowers")
 
 func start_timer():
-	pass
+	started = true
+	toggle_active()
 
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
 func toggle_active():
 	active = not active		# TODO: change sprite
+	if active:
+		print("timer started")
+		get_node("Timer").start()
 
 func _on_collision():
+	print("collision")
 	colliding = true
 	check_collision()	# TODO: timer!
 	
@@ -35,3 +41,11 @@ func check_collision():
 
 func _on_collision_end():
 	colliding = false
+
+
+func _on_timeout():
+	if colliding:
+		print("collision")
+		check_collision()
+	else:
+		toggle_active()		# TODO: refactor

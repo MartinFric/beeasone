@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://levels/Level1CollectingNectar.gd" type="Script" id=1]
 [ext_resource path="res://screens/TopBar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/flower.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/ObjectivesFlowersPopup.tscn" type="PackedScene" id=4]
-
+[ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=5]
 
 [node name="Level1" type="Node" index="0"]
 
@@ -17,10 +17,12 @@ margin_bottom = 226.0
 
 [node name="Flower" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 173.28, 375.44 )
+position = Vector2( 696.732, 629.043 )
 
 [node name="ObjectiveFlowersPopup" parent="." index="2" instance=ExtResource( 4 )]
 
 visible = false
+
+[node name="Bee" parent="." index="3" instance=ExtResource( 5 )]
 
 

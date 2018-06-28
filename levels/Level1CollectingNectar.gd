@@ -15,12 +15,14 @@ func on_objectives_read():
 	start_game()
 	
 func on_collected():
+	print("COLLECTED!!")
 	nectarCollected += 3
 	
 func start_game():
 	var flowers = get_tree().get_nodes_in_group("flowers")
 	for f in flowers:
 		f.connect("collected", self, "on_collected")
+#		f.
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
