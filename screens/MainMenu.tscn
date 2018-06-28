@@ -105,12 +105,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-<<<<<<< HEAD
-theme = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.910156, 0.589235, 0.135101, 1 )
-=======
->>>>>>> 008456b3dd0ba912e874a985602dcca7851bbea4
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -137,12 +131,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-<<<<<<< HEAD
-theme = ExtResource( 3 )
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 1, 0.589216, 0.135098, 1 )
-=======
->>>>>>> 008456b3dd0ba912e874a985602dcca7851bbea4
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -154,29 +142,10 @@ _sections_unfolded = [ "Textures" ]
 
 [node name="beeasone_logo_main" type="Sprite" parent="Panel" index="1"]
 
-<<<<<<< HEAD
-position = Vector2( 1637.78, 352.095 )
-texture = ExtResource( 5 )
-
-[node name="Sprite" type="Sprite" parent="Panel" index="2"]
-
-position = Vector2( 261.249, 283.956 )
-scale = Vector2( 0.738382, 1.11845 )
-texture = ExtResource( 6 )
-
-[node name="Sprite2" type="Sprite" parent="Panel" index="3"]
-
-position = Vector2( 953.317, 218.464 )
-scale = Vector2( 1.76702, 2.01636 )
-texture = ExtResource( 7 )
-
-[connection signal="pressed" from="Panel/Container/exit" to="." method="_on_exit_pressed"]
-=======
 position = Vector2( 1626.57, 275.482 )
 texture = ExtResource( 9 )
 
 [connection signal="pressed" from="Panel/Container/newGame" to="." method="_on_newGame_pressed"]
->>>>>>> 008456b3dd0ba912e874a985602dcca7851bbea4
 
 [connection signal="pressed" from="Panel/Container/exit" to="." method="_on_exit_pressed"]
 
