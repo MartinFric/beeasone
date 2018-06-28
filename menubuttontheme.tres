@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=2 format=2]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 0
+use_mipmaps = false
+use_filter = true
+extra_spacing_char = 1
+_sections_unfolded = [ "Extra Spacing", "Settings" ]
+
+[resource]
+
+resource_name = "menu theme"
+Button/colors/font_color = Color( 0.707031, 0.573082, 0.171234, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.980469, 0.785201, 0.0191498, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = null
+Button/styles/pressed = null
+Label/colors/font_color = Color( 0.953125, 0.663331, 0.0484009, 1 )
+Label/colors/font_color_shadow = Color( 0.972656, 0.77651, 0.547119, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+MenuButton/colors/font_color = Color( 0.800781, 0.597385, 0.165787, 1 )
+MenuButton/colors/font_color_disabled = Color( 1, 1, 1, 0.3 )
+MenuButton/colors/font_color_hover = Color( 0.976563, 0.760496, 0.0228882, 1 )
+MenuButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+MenuButton/constants/hseparation = 3
+MenuButton/fonts/font = SubResource( 1 )
+MenuButton/styles/disabled = null
+MenuButton/styles/focus = null
+MenuButton/styles/hover = null
+MenuButton/styles/normal = null
+MenuButton/styles/pressed = null
+_sections_unfolded = [ "Button", "Button/colors", "Button/fonts", "Button/styles", "Label", "Label/colors", "MenuButton", "MenuButton/colors", "MenuButton/fonts", "MenuButton/styles", "Resource" ]
+
