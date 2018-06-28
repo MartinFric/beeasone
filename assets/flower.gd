@@ -1,53 +1,60 @@
-extends StaticBody2D
+extends RigidBody2D
 
 # class member variables go here, for example:
 var started = false
 var active = false
 var stopped = false
 var colliding = false
-var activations_remaining = 3
 
 signal collected
 
 func _ready():
 	add_to_group("flowers")
 
+func reset_timer():
+	var duration = (randi() % 200) / 100.0 + 1
+	print(duration)
+	var timer = get_node("Timer")
+	timer.stop()
+	timer.wait_time = duration
+	timer.start()
+	
 func start_timer():
+	print("started")
 	started = true
-	toggle_active()
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+	reset_timer()
 
 func toggle_active():
 	active = not active		# TODO: change sprite
 	if active:
-		print("timer started")
-		self.hide()
-		get_node("Timer").start()
-	else:
+		print("activating")
 		self.show()
+		reset_timer()
+	else:
+		print("deactivating")
+		self.hide()
 
-func _on_collision():
-	print("collision")
+func _on_collision(obj):
 	colliding = true
+	print("on_collision")
 	check_collision()	# TODO: timer!
 	
 func check_collision():
 	if active:
 		toggle_active()
+		stopped = true
 		emit_signal("collected")
 
-
-func _on_collision_end():
+func _on_collision_end(obj):
+	print("on_collision_end")
 	colliding = false
 
-
 func _on_timeout():
-	if colliding:
-		print("collision")
+	if stopped or not started:
+		pass
+	elif colliding:
+		print("time collision")
 		check_collision()
 	else:
+		print("switch")
 		toggle_active()		# TODO: refactor

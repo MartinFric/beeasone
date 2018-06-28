@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/right2.png-6801546565cf0db8d1cb70ea08e5c82e.stex"
+path="res://.import/exitGameActive.png-598328e77c6fffd66e05a389a6771164.stex"
 
 [deps]
 
-source_file="res://Assets/Bee/right2.png"
-dest_files=[ "res://.import/right2.png-6801546565cf0db8d1cb70ea08e5c82e.stex" ]
+source_file="res://assets/MenuButtons/exitGameActive.png"
+dest_files=[ "res://.import/exitGameActive.png-598328e77c6fffd66e05a389a6771164.stex" ]
 
 [params]
 

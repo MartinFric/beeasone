@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 # class member variables go here, for example:
 export (int) var SPEED  # how fast the player will move (pixels/sec)
@@ -39,7 +39,9 @@ func _process(delta):
         $AnimatedSprite.flip_v = velocity.y > 0
 
 func _on_Bee_body_entered(body):
-    emit_signal("hit")
+	if (body.get_name() == "Hornet"):
+    	hide()
+    	emit_signal("hit")
     #$CollisionShape2D.disabled = true
     #position = pos
     #show()
