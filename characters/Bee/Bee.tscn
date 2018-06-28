@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Bee.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Bee/beeTop.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Bee/beeRight.png" type="Texture" id=3]
+[ext_resource path="res://characters/Bee/Bee.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Bee/up1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Bee/up2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Bee/right1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Bee/right2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -12,7 +14,7 @@ animations = [ {
 "name": "Top",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Right",
 "speed": 5.0
@@ -40,8 +42,8 @@ SPEED = 400
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
-position = Vector2( 0.417267, 21.8469 )
-scale = Vector2( 0.0252289, 0.0898421 )
+position = Vector2( 0.986048, 19.8344 )
+scale = Vector2( 0.111666, 0.246726 )
 frames = SubResource( 1 )
 animation = "Top"
 
