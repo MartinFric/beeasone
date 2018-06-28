@@ -14,7 +14,7 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-func _on_new_game_pressed():
+func _on_newGame_pressed():
 	get_tree().change_scene("res://screens/Intro.tscn")
 
 
@@ -25,3 +25,5 @@ func _on_exit_pressed():
 func _process(delta):
    if Input.is_action_pressed("ui_cancel"):
       get_tree().quit()
+
+
