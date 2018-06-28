@@ -1,5 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Node" type="Node" index="0"]
+[ext_resource path="res://Assets/story.png" type="Texture" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="story" type="Sprite" parent="." index="0"]
+
+position = Vector2( 985.306, 456.83 )
+scale = Vector2( 2.1223, 3.78418 )
+texture = ExtResource( 1 )
 
 
