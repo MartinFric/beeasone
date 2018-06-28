@@ -12,7 +12,7 @@ func _ready():
 	add_to_group("flowers")
 
 func reset_timer():
-	var duration = (randi() % 400) / 100.0 + 1
+	var duration = (randi() % 200) / 100.0 + 1
 	print(duration)
 	var timer = get_node("Timer")
 	timer.stop()
@@ -20,9 +20,9 @@ func reset_timer():
 	timer.start()
 	
 func start_timer():
+	print("started")
 	started = true
 	reset_timer()
-	toggle_active()
 
 func toggle_active():
 	active = not active		# TODO: change sprite
@@ -35,8 +35,6 @@ func toggle_active():
 		self.hide()
 
 func _on_collision(obj):
-	if not started:
-		pass
 	colliding = true
 	print("on_collision")
 	check_collision()	# TODO: timer!

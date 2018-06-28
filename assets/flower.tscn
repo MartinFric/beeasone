@@ -53,4 +53,6 @@ autostart = false
 
 [connection signal="body_exited" from="." to="." method="_on_collision_end"]
 
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]
+
 
