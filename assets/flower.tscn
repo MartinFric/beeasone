@@ -33,4 +33,6 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
+[connection signal="tree_entered" from="CollisionShape2D" to="." method="_on_collision"]
+
 

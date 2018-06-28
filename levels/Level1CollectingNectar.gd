@@ -4,7 +4,6 @@ var objectivePopupMenu
 # class member variables go here, for example:
 # var a = 2
 var nectarCollected = 0
-signal connected
 
 func _ready():
 	objectivePopupMenu = get_node("ObjectiveFlowersPopup")
