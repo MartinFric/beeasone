@@ -129,6 +129,5 @@ _sections_unfolded = [ "Margin", "Rect", "Theme" ]
 position = Vector2( 1634.57, 275.482 )
 texture = ExtResource( 3 )
 
-[connection signal="pressed" from="Container/new game" to="." method="_on_new_game"]
 
 

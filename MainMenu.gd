@@ -7,7 +7,6 @@ extends MarginContainer
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	print("menu")
 	pass
 
 #func _process(delta):
@@ -15,7 +14,5 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
-func _on_new_game():
-	print("new game")
-	get_tree().change_scene("res://levels/Level1CollectingNectar.tscn")
+func _on_new_game_pressed():
+	get_tree().change_scene("res://Intro.tscn");
