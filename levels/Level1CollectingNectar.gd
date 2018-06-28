@@ -7,9 +7,14 @@ var nectarCollected = 0
 
 func _ready():
 	objectivePopupMenu = get_node("ObjectiveFlowersPopup")
+	objectivePopupMenu.connect("hidden", self, "on_objectives_read")
 	objectivePopupMenu.show()
 
-func on_collected:
+func on_objectives_read():
+	print("objectives read")
+	start_game()
+	
+func on_collected():
 	nectarCollected += 3
 	
 func start_game():

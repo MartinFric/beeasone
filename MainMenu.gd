@@ -1,13 +1,13 @@
-extends PopupDialog
+extends MarginContainer
 
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-signal hidden
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	print("menu")
 	pass
 
 #func _process(delta):
@@ -16,6 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_OkButton_pressed():
-	self.hide()
-	emit_signal("hidden")
+func _on_new_game():
+	print("new game")
+	get_tree().change_scene("res://levels/Level1CollectingNectar.tscn")

@@ -35,4 +35,6 @@ autostart = false
 
 [connection signal="tree_entered" from="CollisionShape2D" to="." method="_on_collision"]
 
+[connection signal="tree_exited" from="CollisionShape2D" to="." method="_on_collision_end"]
+
 

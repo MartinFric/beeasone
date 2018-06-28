@@ -4,6 +4,7 @@ extends StaticBody2D
 var started = false
 var active = false
 var stopped = false
+var colliding = false
 var activations_remaining = 3
 
 signal collected
@@ -20,9 +21,17 @@ func start_timer():
 #	# Update game logic here.
 #	pass
 func toggle_active():
-	active = not active	// TODO: change sprite
+	active = not active		# TODO: change sprite
 
 func _on_collision():
+	colliding = true
+	check_collision()	# TODO: timer!
+	
+func check_collision():
 	if active:
 		toggle_active()
 		emit_signal("collected")
+
+
+func _on_collision_end():
+	colliding = false

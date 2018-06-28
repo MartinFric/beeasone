@@ -11,6 +11,9 @@ script = ExtResource( 1 )
 
 [node name="MarginContainer" parent="." index="0" instance=ExtResource( 2 )]
 
+margin_right = 561.0
+margin_bottom = 226.0
+
 [node name="Flower" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 173.28, 375.44 )
