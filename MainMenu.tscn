@@ -102,9 +102,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 560.0
-margin_top = 600.0
+margin_top = 598.0
 margin_right = 1360.0
-margin_bottom = 680.0
+margin_bottom = 678.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -112,12 +112,15 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
+text = "ABOUT GAME"
 flat = false
 align = 1
+_sections_unfolded = [ "Margin", "Rect", "Theme" ]
 
 [node name="beeasone_logo_main" type="Sprite" parent="." index="1"]
 
