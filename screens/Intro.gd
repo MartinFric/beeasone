@@ -5,9 +5,15 @@ extends Node
 # var b = "textvar"
 
 func _ready():
-	get_tree().change_scene("res://levels/Level1CollectingNectar.tscn")
+	# Called when the node is added to the scene for the first time.
+	# Initialization here
+	get_node("Timer").start()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://screens/MainMenu.tscn")
