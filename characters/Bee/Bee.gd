@@ -3,12 +3,12 @@ extends Area2D
 # class member variables go here, for example:
 export (int) var SPEED  # how fast the player will move (pixels/sec)
 var screensize  # size of the game window
+signal hit
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	screensize = get_viewport_rect().size
-	pass
 
 func _process(delta):
     var velocity = Vector2() # the player's movement vector
