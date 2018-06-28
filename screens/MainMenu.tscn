@@ -9,6 +9,8 @@
 [ext_resource path="res://Assets/MenuButtons/aboutGame.png" type="Texture" id=7]
 [ext_resource path="res://Assets/MenuButtons/aboutGameActive.png" type="Texture" id=8]
 [ext_resource path="res://assets/beeasone_logo_main.png" type="Texture" id=9]
+[ext_resource path="res://assets/queen.png" type="Texture" id=10]
+[ext_resource path="res://assets/title.png" type="Texture" id=11]
 
 [node name="MainMenuContainer" type="MarginContainer" index="0"]
 
@@ -69,9 +71,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 531.0
-margin_top = 342.0
+margin_top = 314.0
 margin_right = 1394.0
-margin_bottom = 524.0
+margin_bottom = 496.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -95,9 +97,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 539.0
-margin_top = 754.0
+margin_top = 839.0
 margin_right = 1432.0
-margin_bottom = 924.0
+margin_bottom = 1009.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -121,9 +123,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 533.0
-margin_top = 563.0
+margin_top = 668.0
 margin_right = 1415.0
-margin_bottom = 719.0
+margin_bottom = 824.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -142,8 +144,21 @@ _sections_unfolded = [ "Textures" ]
 
 [node name="beeasone_logo_main" type="Sprite" parent="Panel" index="1"]
 
-position = Vector2( 1626.57, 275.482 )
+position = Vector2( 1644.22, 337.423 )
+scale = Vector2( 1.07693, 0.942051 )
 texture = ExtResource( 9 )
+
+[node name="queen_logo" type="Sprite" parent="Panel" index="2"]
+
+position = Vector2( 252.92, 263.358 )
+scale = Vector2( 0.748076, 1.06671 )
+texture = ExtResource( 10 )
+
+[node name="title" type="Sprite" parent="Panel" index="3"]
+
+position = Vector2( 947.478, 131.648 )
+scale = Vector2( 2.40692, 3.11049 )
+texture = ExtResource( 11 )
 
 [connection signal="pressed" from="Panel/Container/newGame" to="." method="_on_newGame_pressed"]
 
