@@ -1,8 +1,9 @@
 extends KinematicBody2D
 
 # class member variables go here, for example:
-export (int) var SPEED  # how fast the player will move (pixels/sec)
+var speed = 400
 var screensize  # size of the game window
+var isExhausted = false;
 signal hit
 
 func _ready():
@@ -20,8 +21,12 @@ func _process(delta):
         velocity.y += 1
     if Input.is_action_pressed("ui_up"):
         velocity.y -= 1
+    if (Input.is_action_pressed("ui_accept") && !isExhausted):
+        speed = 1000
+        isExhausted = true
+        $SpeedDuration.start()
     if velocity.length() > 0:
-        velocity = velocity.normalized() * SPEED
+        velocity = velocity.normalized() * speed
         $AnimatedSprite.play()
     else:
         $AnimatedSprite.stop()
@@ -46,3 +51,10 @@ func _on_Bee_body_entered(body):
     #position = pos
     #show()
     #$CollisionShape2D.disabled = false
+
+func _on_SpeedDuration_timeout():
+	speed = 400
+	$Recovery.start()
+
+func _on_Recovery_timeout():
+	isExhausted = false;
