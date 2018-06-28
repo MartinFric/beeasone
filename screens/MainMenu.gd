@@ -23,5 +23,5 @@ func _on_exit_pressed():
 
 
 func _process(delta):
-   if Input.is_action_pressed("key_exit"):
+   if Input.is_action_pressed("ui_cancel"):
       get_tree().quit()
