@@ -53,4 +53,6 @@ position = Vector2( 1.17462, 22.2414 )
 scale = Vector2( 1.25306, 1.55221 )
 shape = SubResource( 2 )
 
+[connection signal="body_entered" from="." to="." method="_on_Bee_body_entered"]
+
 

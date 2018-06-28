@@ -37,3 +37,10 @@ func _process(delta):
     elif velocity.y != 0:
         $AnimatedSprite.animation = "Top"
         $AnimatedSprite.flip_v = velocity.y > 0
+
+func _on_Bee_body_entered(body):
+    emit_signal("hit")
+    #$CollisionShape2D.disabled = true
+    #position = pos
+    #show()
+    #$CollisionShape2D.disabled = false
