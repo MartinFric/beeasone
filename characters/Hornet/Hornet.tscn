@@ -19,7 +19,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="RigidBody2D" type="RigidBody2D" index="0"]
+[node name="Hornet" type="RigidBody2D" index="0"]
 
 position = Vector2( 925.803, 508.725 )
 input_pickable = false

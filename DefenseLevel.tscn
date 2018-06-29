@@ -98,7 +98,7 @@ loop = true
 lookahead = 4.0
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Worker1" parent="." index="5" instance=ExtResource( 4 )]
+[node name="Gethering" type="Node" parent="." index="5"]
 
 position = Vector2( 362.523, 855.957 )
 z_index = 1
@@ -117,6 +117,9 @@ z_index = 1
 _sections_unfolded = [ "Z Index" ]
 
 [node name="background" type="Sprite" parent="." index="8"]
+editor/display_folded = true
+
+[node name="flower-blue" type="Sprite" parent="Gethering" index="0"]
 
 position = Vector2( 961.198, 538.341 )
 scale = Vector2( 1.68372, 1.39474 )
@@ -146,6 +149,94 @@ scale = Vector2( 1.77235, 1.7538 )
 frames = SubResource( 4 )
 animation = "default"
 
+[node name="HoneyBringer" parent="Gethering" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 329.795, 863.51 )
+
+[node name="HoneyBringer2" parent="Gethering" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 1042.25, 863.51 )
+
+[node name="HoneyBringer3" parent="Gethering" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 1666.6, 848.405 )
+
+[node name="HUD" type="CanvasLayer" parent="." index="6"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Message" type="Label" parent="HUD" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.0
+margin_top = -235.0
+margin_right = 223.0
+margin_bottom = -134.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "You have failed to protect workers"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Try again" type="TextureButton" parent="HUD" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 705.0
+margin_top = 473.0
+margin_right = 1212.0
+margin_bottom = 561.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+
+[node name="Menu" type="TextureButton" parent="HUD" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 728.0
+margin_top = 592.0
+margin_right = 1174.0
+margin_bottom = 665.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
 [connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
@@ -156,10 +247,10 @@ animation = "default"
 
 [connection signal="timeout" from="StartIn" to="." method="_on_StartIn_timeout"]
 
-[connection signal="killed" from="Worker1" to="." method="_on_Worker1_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer" to="." method="_on_HoneyBringer_killed"]
 
-[connection signal="killed" from="Worker2" to="." method="_on_Worker1_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer2" to="." method="_on_HoneyBringer2_killed"]
 
-[connection signal="killed" from="Worker3" to="." method="_on_Worker1_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer3" to="." method="_on_HoneyBringer3_killed"]
 
 

@@ -8,6 +8,9 @@ func _ready():
 	$"flower-blue".play()
 	$"flower-white".play()
 	randomize()
+	$HUD/Message.hide()
+	$"HUD/Try again".hide()
+	$"HUD/Menu".hide()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -32,14 +35,16 @@ func _on_HornetSpawn_timeout():
     # choose the velocity
     hornet.set_linear_velocity(Vector2(rand_range(hornet.MIN_SPEED, hornet.MAX_SPEED), 0).rotated(direction))
 
+func _on_HoneyBringer_killed():
+	game_over()
 
-func _on_Bee_hit():
-	pass # replace with function body
+func _on_HoneyBringer2_killed():
+	game_over()
 
-
-func _on_Worker1_killed():
-	get_tree().quit()
-
-
-func _on_Bee_recovery():
-	pass # replace with function body
+func _on_HoneyBringer3_killed():
+	game_over()
+	
+func game_over():
+	$HUD/Message.show()
+	$"HUD/Try again".show()
+	$"HUD/Menu".show()
