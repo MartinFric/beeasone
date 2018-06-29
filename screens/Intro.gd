@@ -7,7 +7,7 @@ extends Node
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	get_node("Timer").start()
+	pass
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

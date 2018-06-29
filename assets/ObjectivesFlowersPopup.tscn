@@ -1,31 +1,29 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/ObjectivesFlowersPopup.gd" type="Script" id=1]
 [ext_resource path="res://fonts/orangeFont.tres" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/flowers/flower-white-active.png" type="Texture" id=3]
 [ext_resource path="res://assets/flowers/flower-white-inactive.png" type="Texture" id=4]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="Gradient" id=6]
 
-size = 40
-use_mipmaps = true
-use_filter = false
-font_data = ExtResource( 2 )
-_sections_unfolded = [ "Font", "Settings" ]
+offsets = PoolRealArray( 0, 0.0215232, 0.031457, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.0215232, 0.0215232, 0.0215232, 1, 0.031457, 0.031457, 0.031457, 1, 1, 1, 1, 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="GradientTexture" id=7]
 
-size = 30
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 2 )
-_sections_unfolded = [ "Font", "Settings" ]
+flags = 4
+gradient = SubResource( 6 )
+width = 2048
+
+[sub_resource type="Theme" id=5]
+
 
 [sub_resource type="DynamicFont" id=2]
 
 size = 30
 use_mipmaps = false
-use_filter = false
+use_filter = true
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
@@ -37,9 +35,16 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
+[sub_resource type="DynamicFont" id=4]
+
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [node name="ObjectiveFlowersPopup" type="PopupDialog" index="0"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -55,8 +60,32 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 popup_exclusive = false
 script = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+[node name="TextureButton3" type="TextureButton" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1051.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = SubResource( 7 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -72,7 +101,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 1 )
+theme = SubResource( 5 )
 bbcode_enabled = false
 bbcode_text = ""
 visible_characters = -1
@@ -85,9 +114,9 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Theme", "custom_fonts" ]
 
-[node name="OkButton" type="Button" parent="." index="1"]
+[node name="OkButton" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -104,7 +133,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -114,7 +143,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="TextureButton" type="TextureButton" parent="." index="2"]
+[node name="TextureButton" type="TextureButton" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -138,7 +167,7 @@ group = null
 texture_normal = ExtResource( 3 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="TextureButton2" type="TextureButton" parent="." index="3"]
+[node name="TextureButton2" type="TextureButton" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -162,7 +191,7 @@ group = null
 texture_normal = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Label" type="Label" parent="." index="4"]
+[node name="Label" type="Label" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -178,14 +207,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Flower with nectar"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Label2" type="Label" parent="." index="5"]
+[node name="Label2" type="Label" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -201,7 +230,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Flower without nectar"
 percent_visible = 1.0
 lines_skipped = 0

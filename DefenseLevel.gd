@@ -40,8 +40,11 @@ func _process(delta):
 	if time > 40:
 		$HornetSpawn.wait_time = 0.3
 		
-	if time > 2:
+	if time > 60:
 		$Win.show()
+		global.bees_count += 1000
+		if global.bees_count > 2000:
+			global.finished = true
 		get_node("HornetSpawn").stop()
 		win = true
 	
