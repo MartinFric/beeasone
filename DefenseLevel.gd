@@ -19,7 +19,7 @@ func _ready():
 	#$"Gethering/flower-white".play()
 	
 	randomize()
-	"HUD/Try again".hide()
+	$"HUD/Try again".hide()
 
 	$"HUD/Menu".hide()
 	$"HUD/Failed".hide()
