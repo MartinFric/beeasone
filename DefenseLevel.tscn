@@ -277,13 +277,12 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
-[connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
-
 [connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
 
 [connection signal="callGuards" from="Container" to="." method="_on_Container_callGuards"]
 
 [connection signal="releaseGuards" from="Container" to="." method="_on_Container_releaseGuards"]
+[connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
 
 [connection signal="timeout" from="HornetSpawn" to="." method="_on_HornetSpawn_timeout"]
 
