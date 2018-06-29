@@ -8,14 +8,14 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 
-	$"flower-pink".play()
-	$"flower-blue".play()
-	$"flower-white".play()
+	#$"Gethering/flower-pink".play()
+	#$"Gethering/flower-blue".play()
+	#$"Gethering/flower-white".play()
 	
 	randomize()
-	$HUD/Message.hide()
 	$"HUD/Try again".hide()
 	$"HUD/Menu".hide()
+	$HUD/Failed.hide()
 	
 	$"Start dialogue".popup()
 
@@ -61,9 +61,9 @@ func _on_HoneyBringer3_killed():
 	game_over()
 	
 func game_over():
-	$HUD/Message.show()
 	$"HUD/Try again".show()
 	$"HUD/Menu".show()
+	$HUD/Failed.show()
 
 func _on_Start_dialogue_confirmed():
 	timeStarted = true
