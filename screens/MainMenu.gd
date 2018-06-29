@@ -27,3 +27,7 @@ func _process(delta):
       get_tree().quit()
 
 
+
+
+func _on_about_pressed():
+	get_tree().change_scene("res://screens/Credits.tscn")

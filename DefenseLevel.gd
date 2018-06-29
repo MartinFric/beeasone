@@ -22,13 +22,9 @@ func _ready():
 	randomize()
 	$"HUD/Try again".hide()
 	$"HUD/Menu".hide()
-<<<<<<< HEAD
 	$"HUD/newgame".hide()
 	$"HUD/returntomenu".hide()
 	$HUD/Failed.hide()
-=======
-	$"HUD/Failed".hide()
->>>>>>> f2505af89c4acb3be52766dbc3487fe706ece205
 	
 	$"Start dialogue".popup()
 
@@ -81,18 +77,18 @@ func _on_HoneyBringer3_killed():
 	game_over()
 	
 func game_over():
-	$"HUD/Try again".show()
-	$"HUD/Menu".show()
-	$HUD/Failed.show()
-	$"HUD/Menu".show()
-	$"HUD/newgame".show()
+	if !win:
+		$"HUD/Try again".show()
+		$"HUD/Menu".show()
+		$HUD/Failed.show()
+		$"HUD/returntomenu".show()
+		$"HUD/newgame".show()
 
 func _on_Start_dialogue_confirmed():
 	timeStarted = true
 	get_node("HornetSpawn").start()
 
 func _on_Container_callGuards():
-	print("jijij")
 	guard = guard_class.instance()
 	guard2 = guard_class.instance()
 	guard3 = guard_class.instance()
