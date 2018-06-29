@@ -67,7 +67,7 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
 [node name="HornetSpawn" type="Timer" parent="." index="2"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 0.9
 one_shot = false
 autostart = false
 
@@ -98,6 +98,8 @@ lookahead = 4.0
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Gethering" type="Node" parent="." index="5"]
+
+editor/display_folded = true
 
 [node name="flower-blue" type="AnimatedSprite" parent="Gethering" index="0"]
 

@@ -37,10 +37,10 @@ func _process(delta):
 		emit_signal("timerStart", time)
 
 	if time > 20:
-		$HornetSpawn.wait_time = 0.4
+		$HornetSpawn.wait_time = 0.85
 	
 	if time > 40:
-		$HornetSpawn.wait_time = 0.3
+		$HornetSpawn.wait_time = 0.8
 		
 	if time > 60:
 		$Win.show()

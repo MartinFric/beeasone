@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee_model_hero_army_right.png-0fcecacc072b335f2b6031b1485312d6.stex"
+path="res://.import/bee_model_hero_army_right.png-9195e7862c598454683bf1582716bc4b.stex"
 
 [deps]
 
-source_file="res://assets/Bee/bee_model_hero_army_right.png"
-dest_files=[ "res://.import/bee_model_hero_army_right.png-0fcecacc072b335f2b6031b1485312d6.stex" ]
+source_file="res://Assets/Bee/bee_model_hero_army_right.png"
+dest_files=[ "res://.import/bee_model_hero_army_right.png-9195e7862c598454683bf1582716bc4b.stex" ]
 
 [params]
 

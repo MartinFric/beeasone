@@ -26,7 +26,7 @@ func _process(delta):
     if Input.is_action_pressed("ui_up"):
         velocity.y -= 1
     if (Input.is_action_pressed("ui_accept") && !isExhausted):
-        speed = 1000
+        speed = 1400
         isExhausted = true
         $SpeedDuration.start()
     if velocity.length() > 0:
@@ -61,7 +61,7 @@ func _on_Bee_body_entered(body):
     #$CollisionShape2D.disabled = false
 
 func _on_SpeedDuration_timeout():
-	speed = 400
+	speed = 800
 	recoveryState = 0
 	isRecoverying = true
 	$Recovery.start()

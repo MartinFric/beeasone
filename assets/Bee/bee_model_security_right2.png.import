@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee_model_security_right2.png-1fedca6564dbf6b1f8f963462368af19.stex"
+path="res://.import/bee_model_security_right2.png-5b604220b04dbe33f04851e85f798a18.stex"
 
 [deps]
 
-source_file="res://assets/Bee/bee_model_security_right2.png"
-dest_files=[ "res://.import/bee_model_security_right2.png-1fedca6564dbf6b1f8f963462368af19.stex" ]
+source_file="res://Assets/Bee/bee_model_security_right2.png"
+dest_files=[ "res://.import/bee_model_security_right2.png-5b604220b04dbe33f04851e85f798a18.stex" ]
 
 [params]
 
