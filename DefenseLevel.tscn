@@ -30,6 +30,8 @@ margin_bottom = 282.0
 
 position = Vector2( 925.869, 645.56 )
 scale = Vector2( 1.60899, 1.75898 )
+z_index = 1
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="HornetSpawn" type="Timer" parent="." index="2"]
 
@@ -53,6 +55,7 @@ curve = SubResource( 1 )
 [node name="HornetSpawn" type="PathFollow2D" parent="HornetPath" index="0"]
 
 position = Vector2( 3.31854, -2.34479 )
+z_index = 2
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
@@ -60,6 +63,7 @@ rotate = true
 cubic_interp = true
 loop = true
 lookahead = 4.0
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Worker1" parent="." index="5" instance=ExtResource( 4 )]
 
