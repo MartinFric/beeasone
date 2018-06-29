@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # class member variables go here, for example:
-var speed = 400
+var speed = 600
 var screensize  # size of the game window
 var isExhausted = false
 var isRecoverying = false

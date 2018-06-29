@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="New Game Project"
-run/main_scene="res://DefenseLevel.tscn"
+run/main_scene="res://screens/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://global.gd"
 
 [display]
 

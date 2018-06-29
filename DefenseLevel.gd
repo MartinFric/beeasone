@@ -4,6 +4,7 @@ onready var guard_class = load("res://characters/Guard/Guard.tscn")
 signal timerStart
 var time = 0
 var timeStarted = false
+var win = false
 
 var guard
 var guard2
@@ -40,6 +41,11 @@ func _process(delta):
 	
 	if time > 40:
 		$HornetSpawn.wait_time = 0.3
+		
+	if time > 60:
+		$"Win dialogue".popup()
+		get_node("HornetSpawn").stop()
+		win = true
 	
 func _on_HornetSpawn_timeout():
     # choose a random location on Path2D
@@ -68,11 +74,12 @@ func _on_HoneyBringer3_killed():
 	game_over()
 	
 func game_over():
-	$"HUD/Try again".show()
-	$"HUD/Menu".show()
-	$HUD/Failed.show()
-	$"HUD/Menu".show()
-	$"HUD/newgame".show()
+	if !win:
+		$"HUD/Try again".show()
+		$"HUD/Menu".show()
+		$HUD/Failed.show()
+		$"HUD/returntomenu".show()
+		$"HUD/newgame".show()
 
 func _on_Start_dialogue_confirmed():
 	timeStarted = true
