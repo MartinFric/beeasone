@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://DefenseLevel.gd" type="Script" id=1]
 [ext_resource path="res://screens/TopLeftMenu.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/flowers/flower-white-active.png" type="Texture" id=6]
 [ext_resource path="res://characters/ProtectedWorker/ProtectedWorker.tscn" type="PackedScene" id=7]
 [ext_resource path="res://images/lost_game-popup.png" type="Texture" id=8]
+[ext_resource path="res://images/level1.png" type="Texture" id=9]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -189,6 +190,14 @@ dialog_text = "Start the game"
 dialog_hide_on_ok = true
 _sections_unfolded = [ "Dialog" ]
 
+[node name="Sprite" type="Sprite" parent="." index="8"]
+
+position = Vector2( 959.735, 534.598 )
+scale = Vector2( 1.67673, 1.38509 )
+z_index = -1
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
 [connection signal="timerStart" from="." to="Container" method="_on_Node_timerStart"]
 
 [connection signal="callGuards" from="Container" to="." method="_on_Container_callGuards"]
@@ -197,9 +206,9 @@ _sections_unfolded = [ "Dialog" ]
 
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
-[connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
-
 [connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
+
+[connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
 
 [connection signal="timeout" from="HornetSpawn" to="." method="_on_HornetSpawn_timeout"]
 

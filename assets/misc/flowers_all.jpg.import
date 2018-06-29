@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/right2.png-f52420aa76369e6c5da7f5482796532a.stex"
+path="res://.import/flowers_all.jpg-9fe81c502b1d3658540de3b0ccac4a78.stex"
 
 [deps]
 
-source_file="res://assets/Bee/right2.png"
-dest_files=[ "res://.import/right2.png-f52420aa76369e6c5da7f5482796532a.stex" ]
+source_file="res://assets/misc/flowers_all.jpg"
+dest_files=[ "res://.import/flowers_all.jpg-9fe81c502b1d3658540de3b0ccac4a78.stex" ]
 
 [params]
 
