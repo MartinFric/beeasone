@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exitGame.png-42853a081ca8730c628425fc5d0a8e1c.stex"
+path="res://.import/exitGame.png-4bfebece60cf2602e9caa311d03001dc.stex"
 
 [deps]
 
-source_file="res://Assets/MenuButtons/exitGame.png"
-dest_files=[ "res://.import/exitGame.png-42853a081ca8730c628425fc5d0a8e1c.stex" ]
+source_file="res://assets/MenuButtons/exitGame.png"
+dest_files=[ "res://.import/exitGame.png-4bfebece60cf2602e9caa311d03001dc.stex" ]
 
 [params]
 
