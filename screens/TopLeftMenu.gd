@@ -31,3 +31,7 @@ func _on_Node_timerStart(time):
 
 func _on_Guards_pressed():
 	emit_signal("callGuards")
+
+
+func _on_Map_pressed():
+	get_tree().change_scene("res://screens/Map.tscn")
