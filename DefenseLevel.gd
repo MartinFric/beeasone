@@ -14,13 +14,15 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 
-	#$"Gethering/flower-pink".play()
-	#$"Gethering/flower-blue".play()
-	#$"Gethering/flower-white".play()
+	$"Gethering/flower-pink".play()
+	$"Gethering/flower-blue".play()
+	$"Gethering/flower-white".play()
 	
 	randomize()
 	$"HUD/Try again".hide()
 	$"HUD/Menu".hide()
+	$"HUD/newgame".hide()
+	$"HUD/returntomenu".hide()
 	$HUD/Failed.hide()
 	
 	$"Start dialogue".popup()
@@ -69,6 +71,8 @@ func game_over():
 	$"HUD/Try again".show()
 	$"HUD/Menu".show()
 	$HUD/Failed.show()
+	$"HUD/Menu".show()
+	$"HUD/newgame".show()
 
 func _on_Start_dialogue_confirmed():
 	timeStarted = true
@@ -99,3 +103,11 @@ func _on_Container_releaseGuards():
 		guard3.queue_free()
 	if guard4 != null:
 		guard4.queue_free()
+
+
+func _on_try_again_pressed():
+	get_tree().change_scene("res://DefenseLevel.tscn")
+
+
+func _on_returntomenu_pressed():
+	get_tree().change_scene("res://screens/MainMenu.tscn")

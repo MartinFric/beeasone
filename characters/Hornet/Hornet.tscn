@@ -22,6 +22,7 @@ animations = [ {
 [node name="Hornet" type="RigidBody2D" index="0"]
 
 position = Vector2( 925.803, 508.725 )
+scale = Vector2( 0.8, 0.8 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 0
@@ -41,9 +42,9 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
-MIN_SPEED = 150
-MAX_SPEED = 250
+_sections_unfolded = [ "Collision", "Transform" ]
+MIN_SPEED = 50
+MAX_SPEED = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

@@ -1,14 +1,19 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://DefenseLevel.gd" type="Script" id=1]
-[ext_resource path="res://screens/TopLeftMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/flowers/flower-blue-active.png" type="Texture" id=4]
-[ext_resource path="res://assets/flowers/flower-pink-active.png" type="Texture" id=5]
-[ext_resource path="res://assets/flowers/flower-white-active.png" type="Texture" id=6]
-[ext_resource path="res://characters/ProtectedWorker/ProtectedWorker.tscn" type="PackedScene" id=7]
-[ext_resource path="res://images/lost_game-popup.png" type="Texture" id=8]
-[ext_resource path="res://images/level1.png" type="Texture" id=9]
+[ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=2]
+[ext_resource path="res://screens/TopLeftMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/flowers/flower-blue-active-rotated.png" type="Texture" id=4]
+[ext_resource path="res://assets/flowers/flower-blue-active.png" type="Texture" id=5]
+[ext_resource path="res://assets/flowers/flower-pink-active-rotate.png" type="Texture" id=6]
+[ext_resource path="res://assets/flowers/flower-pink-active.png" type="Texture" id=7]
+[ext_resource path="res://assets/flowers/flower-white-active-rotate.png" type="Texture" id=8]
+[ext_resource path="res://assets/flowers/flower-white-active.png" type="Texture" id=9]
+[ext_resource path="res://characters/ProtectedWorker/ProtectedWorker.tscn" type="PackedScene" id=10]
+[ext_resource path="res://images/lost_game-popup.png" type="Texture" id=11]
+[ext_resource path="res://images/menu/returntomenu.png" type="Texture" id=12]
+[ext_resource path="res://images/menu/tryagain.png" type="Texture" id=13]
+[ext_resource path="res://images/level1.png" type="Texture" id=14]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -17,23 +22,47 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 3.31854, -2.34479, 0, 0, 0, 0, 977.6, -2.34479, 0, 0, 0, 0, 1921.67, -4.8623, 0, 0, 0, 0, 3.31854, -2.34479 )
 }
 
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="Container" parent="." index="0" instance=ExtResource( 2 )]
-
-margin_left = 380.0
-margin_top = 242.0
-margin_right = 420.0
-margin_bottom = 282.0
-
-[node name="Bee" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Bee" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 925.869, 645.56 )
 scale = Vector2( 1.60899, 1.75898 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Container" parent="." index="1" instance=ExtResource( 3 )]
+
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
 
 [node name="HornetSpawn" type="Timer" parent="." index="2"]
 
@@ -53,6 +82,7 @@ autostart = false
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 curve = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="HornetSpawn" type="PathFollow2D" parent="HornetPath" index="0"]
 
@@ -69,41 +99,39 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Gethering" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
-[node name="flower-blue" type="Sprite" parent="Gethering" index="0"]
+[node name="flower-blue" type="AnimatedSprite" parent="Gethering" index="0"]
 
 position = Vector2( 273.435, 862.946 )
 scale = Vector2( 1.6919, 1.89445 )
-z_index = -1
-texture = ExtResource( 4 )
+frames = SubResource( 2 )
+animation = "default"
 _sections_unfolded = [ "Z Index" ]
 
-[node name="flower-pink" type="Sprite" parent="Gethering" index="1"]
+[node name="flower-pink" type="AnimatedSprite" parent="Gethering" index="1"]
 
 position = Vector2( 979.603, 871.266 )
 scale = Vector2( 1.64155, 1.46638 )
-z_index = -1
-texture = ExtResource( 5 )
+frames = SubResource( 3 )
+animation = "default"
 _sections_unfolded = [ "Z Index" ]
 
-[node name="flower-white" type="Sprite" parent="Gethering" index="2"]
+[node name="flower-white" type="AnimatedSprite" parent="Gethering" index="2"]
 
 position = Vector2( 1619.06, 854.46 )
 scale = Vector2( 1.50728, 1.43688 )
-z_index = -1
-texture = ExtResource( 6 )
+frames = SubResource( 4 )
+animation = "default"
 _sections_unfolded = [ "Z Index" ]
 
-[node name="HoneyBringer" parent="Gethering" index="3" instance=ExtResource( 7 )]
+[node name="HoneyBringer" parent="Gethering" index="3" instance=ExtResource( 10 )]
 
 position = Vector2( 329.795, 863.51 )
 
-[node name="HoneyBringer2" parent="Gethering" index="4" instance=ExtResource( 7 )]
+[node name="HoneyBringer2" parent="Gethering" index="4" instance=ExtResource( 10 )]
 
 position = Vector2( 1042.25, 863.51 )
 
-[node name="HoneyBringer3" parent="Gethering" index="5" instance=ExtResource( 7 )]
+[node name="HoneyBringer3" parent="Gethering" index="5" instance=ExtResource( 10 )]
 
 position = Vector2( 1666.6, 848.405 )
 
@@ -162,8 +190,56 @@ group = null
 [node name="Failed" type="Sprite" parent="HUD" index="2"]
 
 position = Vector2( 946.423, 572.133 )
-texture = ExtResource( 8 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="returntomenu" type="TextureButton" parent="HUD" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 600.0
+margin_top = 750.0
+margin_right = 800.0
+margin_bottom = 800.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 12 )
+_sections_unfolded = [ "Margin", "Rect", "Textures" ]
+
+[node name="newgame" type="TextureButton" parent="HUD" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1080.0
+margin_top = 750.0
+margin_right = 1280.0
+margin_bottom = 800.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+_sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="Start dialogue" type="AcceptDialog" parent="." index="7"]
 
@@ -175,8 +251,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 707.0
 margin_top = 315.0
-margin_right = 1427.0
-margin_bottom = 697.0
+margin_right = 1207.0
+margin_bottom = 375.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -188,43 +264,47 @@ window_title = "Alert!"
 resizable = false
 dialog_text = "Start the game"
 dialog_hide_on_ok = true
-_sections_unfolded = [ "Dialog" ]
+_sections_unfolded = [ "Dialog", "Rect" ]
 
-[node name="Sprite" type="Sprite" parent="." index="8"]
+[node name="bg" type="Sprite" parent="." index="8"]
 
-position = Vector2( 959.735, 534.598 )
+position = Vector2( 965.917, 537.689 )
 scale = Vector2( 1.67673, 1.38509 )
 z_index = -1
-texture = ExtResource( 9 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="timerStart" from="." to="Container" method="_on_Node_timerStart"]
+
+[connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
+
+[connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
+
+[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
 
 [connection signal="callGuards" from="Container" to="." method="_on_Container_callGuards"]
 
 [connection signal="releaseGuards" from="Container" to="." method="_on_Container_releaseGuards"]
 
-[connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
-
-[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
-
-[connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
-
 [connection signal="timeout" from="HornetSpawn" to="." method="_on_HornetSpawn_timeout"]
 
 [connection signal="timeout" from="StartIn" to="." method="_on_StartIn_timeout"]
 
-[connection signal="killed" from="Gethering/HoneyBringer" to="." method="_on_HoneyBringer_killed"]
-
 [connection signal="killed" from="Gethering/HoneyBringer" to="Bee" method="_on_HoneyBringer_killed"]
 
-[connection signal="killed" from="Gethering/HoneyBringer2" to="." method="_on_HoneyBringer2_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer" to="." method="_on_HoneyBringer_killed"]
 
 [connection signal="killed" from="Gethering/HoneyBringer2" to="Bee" method="_on_HoneyBringer2_killed"]
 
-[connection signal="killed" from="Gethering/HoneyBringer3" to="." method="_on_HoneyBringer3_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer2" to="." method="_on_HoneyBringer2_killed"]
 
 [connection signal="killed" from="Gethering/HoneyBringer3" to="Bee" method="_on_HoneyBringer3_killed"]
+
+[connection signal="killed" from="Gethering/HoneyBringer3" to="." method="_on_HoneyBringer3_killed"]
+
+[connection signal="pressed" from="HUD/returntomenu" to="." method="_on_returntomenu_pressed"]
+
+[connection signal="pressed" from="HUD/newgame" to="." method="_on_try_again_pressed"]
 
 [connection signal="confirmed" from="Start dialogue" to="." method="_on_Start_dialogue_confirmed"]
 
