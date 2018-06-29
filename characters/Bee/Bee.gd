@@ -69,3 +69,17 @@ func _on_SpeedDuration_timeout():
 func _on_Recovery_timeout():
 	isExhausted = false
 	isRecoverying = false
+
+
+func _on_HoneyBringer_killed():
+	game_over()
+
+func _on_HoneyBringer2_killed():
+	game_over()
+
+func _on_HoneyBringer3_killed():
+	game_over()
+
+func game_over():
+	$CollisionShape2D.disabled = true
+	hide()

@@ -3,8 +3,8 @@
 [ext_resource path="res://characters/Bee/Bee.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bee/up1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Bee/up2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Bee/bee_model_security_right.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Bee/bee_model_security_right2.png" type="Texture" id=5]
+[ext_resource path="res://characters/Bee/bee_model_hero_army_right.png" type="Texture" id=4]
+[ext_resource path="res://characters/Bee/bee_model_hero_army_right2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -28,6 +28,7 @@ radius = 10.0
 
 [node name="Bee" type="KinematicBody2D" index="0"]
 
+editor/display_folded = true
 position = Vector2( 922.498, 670.124 )
 scale = Vector2( 2.06487, 2.20504 )
 input_pickable = false
