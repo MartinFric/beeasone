@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://DefenseLevel.gd" type="Script" id=1]
 [ext_resource path="res://screens/TopLeftMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/ProtectedWorker/ProtectedWorker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/flowers/flower-blue-active.png" type="Texture" id=5]
+[ext_resource path="res://assets/flowers/flower-pink-active.png" type="Texture" id=6]
+[ext_resource path="res://assets/flowers/flower-white-active.png" type="Texture" id=7]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -60,18 +63,59 @@ lookahead = 4.0
 
 [node name="Worker1" parent="." index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 365.041, 855.957 )
+position = Vector2( 362.523, 855.957 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Worker2" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 1064.92, 855.957 )
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Worker3" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 1696.82, 858.474 )
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="flower-blue" type="Sprite" parent="." index="8"]
+
+position = Vector2( 273.435, 862.946 )
+scale = Vector2( 1.6919, 1.89445 )
+z_index = -1
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="flower-pink" type="Sprite" parent="." index="9"]
+
+position = Vector2( 979.603, 871.266 )
+scale = Vector2( 1.64155, 1.46638 )
+z_index = -1
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="flower-white" type="Sprite" parent="." index="10"]
+
+position = Vector2( 1619.06, 854.46 )
+scale = Vector2( 1.50728, 1.43688 )
+z_index = -1
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
 
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
-[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
-
 [connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
+
+[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
 
 [connection signal="timeout" from="HornetSpawn" to="." method="_on_HornetSpawn_timeout"]
 
 [connection signal="timeout" from="StartIn" to="." method="_on_StartIn_timeout"]
 
 [connection signal="killed" from="Worker1" to="." method="_on_Worker1_killed"]
+
+[connection signal="killed" from="Worker2" to="." method="_on_Worker1_killed"]
+
+[connection signal="killed" from="Worker3" to="." method="_on_Worker1_killed"]
 
 
