@@ -41,7 +41,7 @@ func _process(delta):
 		$HornetSpawn.wait_time = 0.3
 		
 	if time > 60:
-		$"Win dialogue".popup()
+		$Win.show()
 		get_node("HornetSpawn").stop()
 		win = true
 	
@@ -106,3 +106,6 @@ func _on_Container_releaseGuards():
 		guard3.queue_free()
 	if guard4 != null:
 		guard4.queue_free()
+
+func _on_Win_pressed():
+	get_tree().change_scene("res://screens/Map.tscn")

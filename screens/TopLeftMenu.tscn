@@ -252,7 +252,7 @@ _sections_unfolded = [ "Textures" ]
 
 process_mode = 1
 wait_time = 7.0
-one_shot = false
+one_shot = true
 autostart = false
 
 [connection signal="mouse_entered" from="Menu" to="." method="_on_menu_mouse_entered"]
