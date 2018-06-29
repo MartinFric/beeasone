@@ -1,12 +1,16 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://DefenseLevel.gd" type="Script" id=1]
 [ext_resource path="res://screens/TopLeftMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/flowers/flower-blue-active.png" type="Texture" id=4]
-[ext_resource path="res://assets/flowers/flower-pink-active.png" type="Texture" id=5]
-[ext_resource path="res://assets/flowers/flower-white-active.png" type="Texture" id=6]
-[ext_resource path="res://characters/ProtectedWorker/ProtectedWorker.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/ProtectedWorker/ProtectedWorker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://images/level1.png" type="Texture" id=5]
+[ext_resource path="res://assets/flowers/flower-pink-active-rotate.png" type="Texture" id=6]
+[ext_resource path="res://assets/flowers/flower-pink-active.png" type="Texture" id=7]
+[ext_resource path="res://assets/flowers/flower-blue-active.png" type="Texture" id=8]
+[ext_resource path="res://assets/flowers/flower-blue-active-rotated.png" type="Texture" id=9]
+[ext_resource path="res://assets/flowers/flower-white-active-rotate.png" type="Texture" id=10]
+[ext_resource path="res://assets/flowers/flower-white-active.png" type="Texture" id=11]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -14,6 +18,33 @@ bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 3.31854, -2.34479, 0, 0, 0, 0, 977.6, -2.34479, 0, 0, 0, 0, 1921.67, -4.8623, 0, 0, 0, 0, 3.31854, -2.34479 )
 }
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Node" type="Node" index="0"]
 
@@ -25,12 +56,13 @@ margin_left = 380.0
 margin_top = 242.0
 margin_right = 420.0
 margin_bottom = 282.0
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Bee" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 925.869, 645.56 )
 scale = Vector2( 1.60899, 1.75898 )
-z_index = 1
+z_index = 3
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="HornetSpawn" type="Timer" parent="." index="2"]
@@ -55,7 +87,8 @@ curve = SubResource( 1 )
 [node name="HornetSpawn" type="PathFollow2D" parent="HornetPath" index="0"]
 
 position = Vector2( 3.31854, -2.34479 )
-z_index = 2
+z_index = 4
+z_as_relative = false
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
@@ -67,31 +100,54 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Gethering" type="Node" parent="." index="5"]
 
+position = Vector2( 362.523, 855.957 )
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Worker2" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 1064.92, 855.957 )
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Worker3" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 1696.82, 858.474 )
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="background" type="Sprite" parent="." index="8"]
 editor/display_folded = true
 
 [node name="flower-blue" type="Sprite" parent="Gethering" index="0"]
 
-position = Vector2( 273.435, 862.946 )
-scale = Vector2( 1.6919, 1.89445 )
-z_index = -1
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Z Index" ]
-
-[node name="flower-pink" type="Sprite" parent="Gethering" index="1"]
-
-position = Vector2( 979.603, 871.266 )
-scale = Vector2( 1.64155, 1.46638 )
+position = Vector2( 961.198, 538.341 )
+scale = Vector2( 1.68372, 1.39474 )
 z_index = -1
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="flower-pink" type="AnimatedSprite" parent="." index="9"]
+
+position = Vector2( 273.436, 870.008 )
+scale = Vector2( 1.85974, 1.91358 )
+frames = SubResource( 2 )
+animation = "default"
 _sections_unfolded = [ "Z Index" ]
 
-[node name="flower-white" type="Sprite" parent="Gethering" index="2"]
+[node name="flower-blue" type="AnimatedSprite" parent="." index="10"]
 
-position = Vector2( 1619.06, 854.46 )
-scale = Vector2( 1.50728, 1.43688 )
-z_index = -1
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Z Index" ]
+position = Vector2( 1582.94, 860.958 )
+scale = Vector2( 1.98341, 2.14113 )
+frames = SubResource( 3 )
+animation = "default"
+
+[node name="flower-white" type="AnimatedSprite" parent="." index="11"]
+
+position = Vector2( 969.845, 863.141 )
+scale = Vector2( 1.77235, 1.7538 )
+frames = SubResource( 4 )
+animation = "default"
 
 [node name="HoneyBringer" parent="Gethering" index="3" instance=ExtResource( 7 )]
 

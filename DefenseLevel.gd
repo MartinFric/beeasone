@@ -7,6 +7,11 @@ var timeStarted = false
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+
+	$"flower-pink".play()
+	$"flower-blue".play()
+	$"flower-white".play()
+	
 	randomize()
 	$HUD/Message.hide()
 	$"HUD/Try again".hide()
