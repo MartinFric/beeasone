@@ -15,9 +15,14 @@ func _ready():
 #	pass
 
 
-func _on_Timer_timeout():
+func _on_Level1_pressed():
 	get_tree().change_scene("res://levels/Level1CollectingNectar.tscn")
 
 
-func _on_Button_pressed():
-		get_tree().change_scene("res://screens/Map.tscn")
+func _on_Level2_pressed():
+	get_tree().change_scene("res://DefenseLevel.tscn")
+
+
+func _on_Queen_pressed():
+	if global.finished:
+		get_tree().change_scene("res://screens/Finish.tscn")

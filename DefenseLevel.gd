@@ -4,6 +4,7 @@ onready var guard_class = load("res://characters/Guard/Guard.tscn")
 signal timerStart
 var time = 0
 var timeStarted = false
+var win = false
 
 var guard
 var guard2
@@ -21,9 +22,13 @@ func _ready():
 	randomize()
 	$"HUD/Try again".hide()
 	$"HUD/Menu".hide()
+<<<<<<< HEAD
 	$"HUD/newgame".hide()
 	$"HUD/returntomenu".hide()
 	$HUD/Failed.hide()
+=======
+	$"HUD/Failed".hide()
+>>>>>>> f2505af89c4acb3be52766dbc3487fe706ece205
 	
 	$"Start dialogue".popup()
 
@@ -40,6 +45,14 @@ func _process(delta):
 	
 	if time > 40:
 		$HornetSpawn.wait_time = 0.3
+		
+	if time > 60:
+		$Win.show()
+		global.bees_count += 1000
+		if global.bees_count > 2000:
+			global.finished = true
+		get_node("HornetSpawn").stop()
+		win = true
 	
 func _on_HornetSpawn_timeout():
     # choose a random location on Path2D
@@ -79,6 +92,7 @@ func _on_Start_dialogue_confirmed():
 	get_node("HornetSpawn").start()
 
 func _on_Container_callGuards():
+	print("jijij")
 	guard = guard_class.instance()
 	guard2 = guard_class.instance()
 	guard3 = guard_class.instance()
@@ -111,3 +125,5 @@ func _on_try_again_pressed():
 
 func _on_returntomenu_pressed():
 	get_tree().change_scene("res://screens/MainMenu.tscn")
+func _on_Win_pressed():
+	get_tree().change_scene("res://screens/Map.tscn")
