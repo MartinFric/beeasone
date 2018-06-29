@@ -32,7 +32,6 @@ func init_ui():
 	timer_progress.value = time_limit
 
 func on_objectives_read():
-	print("objectives read")
 	start_game()
 
 func update_score():

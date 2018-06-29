@@ -20,18 +20,15 @@ func reset_timer():
 	timer.start()
 	
 func start_timer():
-	print("started")
 	started = true
 	reset_timer()
 
 func toggle_active():
 	active = not active		# TODO: change sprite
 	if active:
-		print("activating")
 		get_node("Sprite").texture = load("res://assets/flowers/flower-white-active.png")
 		reset_timer()
 	else:
-		print("deactivating")
 		get_node("Sprite").texture = load("res://assets/flowers/flower-white-inactive.png")
 
 func _on_collision(obj):
@@ -56,7 +53,6 @@ func _on_timeout():
 		toggle_active()
 		check_collision()
 	else:
-		print("switch")
 		toggle_active()		# TODO: refactor
 
 
