@@ -3,8 +3,8 @@
 [ext_resource path="res://characters/Bee/Bee.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bee/up1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Bee/up2.png" type="Texture" id=3]
-[ext_resource path="res://characters/Bee/bee_model_color.png" type="Texture" id=4]
-[ext_resource path="res://characters/Bee/bee_model_color_right2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Bee/bee_model_security_right.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Bee/bee_model_security_right2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -17,19 +17,18 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Right",
-"speed": 5.0
+"speed": 10.0
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 10.0
-height = 20.0
 
 [node name="Bee" type="KinematicBody2D" index="0"]
 
-position = Vector2( 925.923, 666.699 )
+position = Vector2( 922.498, 670.124 )
 scale = Vector2( 2.06487, 2.20504 )
 input_pickable = false
 collision_layer = 1
@@ -47,12 +46,11 @@ position = Vector2( -12.128, -2.49589 )
 scale = Vector2( 0.598422, 0.519215 )
 frames = SubResource( 1 )
 animation = "Right"
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -8.63576, -4.49143 )
-scale = Vector2( 2.99824, 3.74819 )
+position = Vector2( -22.7338, -10.7119 )
+scale = Vector2( 6.88957, 5.43606 )
 shape = SubResource( 2 )
 
 [node name="SpeedDuration" type="Timer" parent="." index="2"]

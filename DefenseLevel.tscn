@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://TestPlay.gd" type="Script" id=1]
+[ext_resource path="res://DefenseLevel.gd" type="Script" id=1]
 [ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/ProtectedWorker/ProtectedWorker.tscn" type="PackedScene" id=3]
 
@@ -11,7 +11,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 3.31854, -2.34479, 0, 0, 0, 0, 977.6, -2.34479, 0, 0, 0, 0, 1921.67, -4.8623, 0, 0, 0, 0, 3.31854, -2.34479 )
 }
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
