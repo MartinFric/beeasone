@@ -53,6 +53,8 @@ func _on_Bee_body_entered(body):
 	if (body.get_name() == "Hornet"):
     	hide()
     	emit_signal("hit")
+	elif ("Flower" in body.get_name()):
+		print("HIT a FLOWER!")
     #$CollisionShape2D.disabled = true
     #position = pos
     #show()
@@ -67,3 +69,17 @@ func _on_SpeedDuration_timeout():
 func _on_Recovery_timeout():
 	isExhausted = false
 	isRecoverying = false
+
+
+func _on_HoneyBringer_killed():
+	game_over()
+
+func _on_HoneyBringer2_killed():
+	game_over()
+
+func _on_HoneyBringer3_killed():
+	game_over()
+
+func game_over():
+	$CollisionShape2D.disabled = true
+	hide()

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flower.png-fa41bd0951be140b528fc92c1e6f5822.stex"
+path="res://.import/bee_model_security_right2.png-7de23382f77f91dd4024571c4fbda2aa.stex"
 
 [deps]
 
-source_file="res://icons/flower.png"
-dest_files=[ "res://.import/flower.png-fa41bd0951be140b528fc92c1e6f5822.stex" ]
+source_file="res://characters/Guard/bee_model_security_right2.png"
+dest_files=[ "res://.import/bee_model_security_right2.png-7de23382f77f91dd4024571c4fbda2aa.stex" ]
 
 [params]
 

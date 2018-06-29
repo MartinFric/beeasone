@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 # class member variables go here, for example:
 var started = false
@@ -20,19 +20,16 @@ func reset_timer():
 	timer.start()
 	
 func start_timer():
-	print("started")
 	started = true
 	reset_timer()
 
 func toggle_active():
 	active = not active		# TODO: change sprite
 	if active:
-		print("activating")
-		self.show()
+		get_node("Sprite").texture = load("res://assets/flowers/flower-white-active.png")
 		reset_timer()
 	else:
-		print("deactivating")
-		self.hide()
+		get_node("Sprite").texture = load("res://assets/flowers/flower-white-inactive.png")
 
 func _on_collision(obj):
 	colliding = true
@@ -41,8 +38,8 @@ func _on_collision(obj):
 	
 func check_collision():
 	if active:
-		toggle_active()
 		stopped = true
+		hide()
 		emit_signal("collected")
 
 func _on_collision_end(obj):
@@ -53,8 +50,15 @@ func _on_timeout():
 	if stopped or not started:
 		pass
 	elif colliding:
-		print("time collision")
+		toggle_active()
 		check_collision()
 	else:
-		print("switch")
 		toggle_active()		# TODO: refactor
+
+
+func _on_area_entered(area):
+	print("Enter " + area)
+
+
+func _on_area_exited(area):
+	print("Exit " + area)

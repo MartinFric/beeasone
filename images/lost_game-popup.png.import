@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee_model_security_right.png-68dd5f1cf3ee052336ea872cef5d3128.stex"
+path="res://.import/lost_game-popup.png-863a50b74bc6c4fbec3c67d2cd4f7deb.stex"
 
 [deps]
 
-source_file="res://characters/Security/bee_model_security_right.png"
-dest_files=[ "res://.import/bee_model_security_right.png-68dd5f1cf3ee052336ea872cef5d3128.stex" ]
+source_file="res://images/lost_game-popup.png"
+dest_files=[ "res://.import/lost_game-popup.png-863a50b74bc6c4fbec3c67d2cd4f7deb.stex" ]
 
 [params]
 
