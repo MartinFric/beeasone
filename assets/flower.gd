@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 # class member variables go here, for example:
 var started = false
@@ -9,6 +9,7 @@ var colliding = false
 signal collected
 
 func _ready():
+	visible = false
 	add_to_group("flowers")
 
 func reset_timer():
