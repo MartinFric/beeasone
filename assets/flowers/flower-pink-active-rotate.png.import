@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flower-pink-active-rotate.png-700269d595694283aa9dabe93ea6786d.stex"
+path="res://.import/flower-pink-active-rotate.png-6605447ebc376e20b904ab03caecf131.stex"
 
 [deps]
 
-source_file="res://Assets/flowers/flower-pink-active-rotate.png"
-dest_files=[ "res://.import/flower-pink-active-rotate.png-700269d595694283aa9dabe93ea6786d.stex" ]
+source_file="res://assets/flowers/flower-pink-active-rotate.png"
+dest_files=[ "res://.import/flower-pink-active-rotate.png-6605447ebc376e20b904ab03caecf131.stex" ]
 
 [params]
 
