@@ -42,8 +42,8 @@ func _process(delta):
 	if time > 40:
 		$HornetSpawn.wait_time = 0.3
 		
-	if time > 60:
-		$"Win dialogue".popup()
+	if time > 10:
+		$Win.show()
 		get_node("HornetSpawn").stop()
 		win = true
 	
@@ -118,3 +118,5 @@ func _on_try_again_pressed():
 
 func _on_returntomenu_pressed():
 	get_tree().change_scene("res://screens/MainMenu.tscn")
+func _on_Win_pressed():
+	get_tree().change_scene("res://screens/Map.tscn")

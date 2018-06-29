@@ -43,6 +43,7 @@ func update_score():
 		endPopup = get_node("EndPopup")
 		endPopup.show()
 		endPopup.get_node("Victory").show()
+		global.bees_count += 1000
 	
 func on_collected():
 	print("COLLECTED!!")

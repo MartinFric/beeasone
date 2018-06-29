@@ -30,10 +30,13 @@ func _on_Bee_recovery(recoveryState):
 func _on_Node_timerStart(time):
 	$Timer.value = time
 
-func _on_Guards_pressed():
+func _on_GuardsDuration_timeout():
+	emit_signal("releaseGuards")
+
+func _on_Map_pressed(): 
+	get_tree().change_scene("res://screens/Map.tscn") 
+
+func _on_Guards2_pressed():
 	emit_signal("callGuards")
 	$Guards2.hide()
 	$GuardsDuration.start()
-
-func _on_GuardsDuration_timeout():
-	emit_signal("releaseGuards")
