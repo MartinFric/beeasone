@@ -9,10 +9,10 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
+func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-#	pass
+	pass
 
 
 func _on_menu_mouse_entered():
@@ -21,4 +21,7 @@ func _on_menu_mouse_entered():
 
 func _on_MenuTexture_pressed():
 	get_tree().change_scene("res://screens/MainMenu.tscn")
-	pass # replace with function body
+
+
+func _on_Bee_recovery(recoveryState):
+	$ProgressBar.value = recoveryState

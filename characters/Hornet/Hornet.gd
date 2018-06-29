@@ -7,7 +7,7 @@ export (int) var MAX_SPEED # maximum speed range
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	pass
+	$AnimatedSprite.play()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

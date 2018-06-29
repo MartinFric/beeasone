@@ -57,7 +57,7 @@ shape = SubResource( 2 )
 
 process_mode = 1
 wait_time = 3.0
-one_shot = false
+one_shot = true
 autostart = false
 
 [node name="Recovery" type="Timer" parent="." index="3"]

@@ -36,3 +36,7 @@ func _on_Bee_hit():
 
 func _on_Worker1_killed():
 	get_tree().quit()
+
+
+func _on_Bee_recovery():
+	pass # replace with function body

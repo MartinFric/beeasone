@@ -3,12 +3,16 @@ extends KinematicBody2D
 # class member variables go here, for example:
 var speed = 400
 var screensize  # size of the game window
-var isExhausted = false;
+var isExhausted = false
+var isRecoverying = false
+var recoveryState = 3
 signal hit
+signal recovery
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	emit_signal("recovery", recoveryState)
 	screensize = get_viewport_rect().size
 
 func _process(delta):
@@ -28,6 +32,10 @@ func _process(delta):
     if velocity.length() > 0:
         velocity = velocity.normalized() * speed
     $AnimatedSprite.play()
+	
+    if isRecoverying:
+        recoveryState += delta
+        emit_signal("recovery", recoveryState)
 	
     position += velocity * delta
     position.x = clamp(position.x, 0, screensize.x)
@@ -52,7 +60,10 @@ func _on_Bee_body_entered(body):
 
 func _on_SpeedDuration_timeout():
 	speed = 400
+	recoveryState = 0
+	isRecoverying = true
 	$Recovery.start()
 
 func _on_Recovery_timeout():
-	isExhausted = false;
+	isExhausted = false
+	isRecoverying = false
