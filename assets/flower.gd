@@ -53,8 +53,15 @@ func _on_timeout():
 	if stopped or not started:
 		pass
 	elif colliding:
-		print("time collision")
 		check_collision()
 	else:
 		print("switch")
 		toggle_active()		# TODO: refactor
+
+
+func _on_area_entered(area):
+	print("Enter " + area)
+
+
+func _on_area_exited(area):
+	print("Exit " + area)

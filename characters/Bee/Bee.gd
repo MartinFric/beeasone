@@ -53,7 +53,7 @@ func _on_Bee_body_entered(body):
 	if (body.get_name() == "Hornet"):
     	hide()
     	emit_signal("hit")
-	elif (body.get_name() == "Flower"):
+	elif ("Flower" in body.get_name()):
 		print("HIT a FLOWER!")
     #$CollisionShape2D.disabled = true
     #position = pos

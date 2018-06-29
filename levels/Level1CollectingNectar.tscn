@@ -24,4 +24,24 @@ position = Vector2( 1167.08, 671.026 )
 
 [node name="Container" parent="." index="3" instance=ExtResource( 5 )]
 
+[node name="Flower2" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 656.12, 313.168 )
+
+[node name="Flower3" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 1685.88, 777.957 )
+
+[node name="Flower4" parent="." index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 285.191, 351.976 )
+
+[node name="Flower5" parent="." index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 203.063, 677.779 )
+
+[node name="Flower6" parent="." index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 1237.33, 199.453 )
+
 
