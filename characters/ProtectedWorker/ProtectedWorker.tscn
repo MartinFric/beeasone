@@ -22,7 +22,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Area2D" type="Area2D" index="0"]
+[node name="HoneyBringer" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -46,6 +46,6 @@ position = Vector2( 0.346359, -3.54811 )
 scale = Vector2( 10.8508, 10.5799 )
 shape = SubResource( 2 )
 
-[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_HoneyBringer_body_entered"]
 
 

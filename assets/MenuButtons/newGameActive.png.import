@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/newGameActive.png-a646730293eda90896d06fb4cffacf58.stex"
+path="res://.import/newGameActive.png-8efcaddc3afd8d247d8b745c20a311bc.stex"
 
 [deps]
 
-source_file="res://assets/MenuButtons/newGameActive.png"
-dest_files=[ "res://.import/newGameActive.png-a646730293eda90896d06fb4cffacf58.stex" ]
+source_file="res://Assets/MenuButtons/newGameActive.png"
+dest_files=[ "res://.import/newGameActive.png-8efcaddc3afd8d247d8b745c20a311bc.stex" ]
 
 [params]
 

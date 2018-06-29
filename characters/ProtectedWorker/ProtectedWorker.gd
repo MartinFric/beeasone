@@ -13,8 +13,7 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
-func _on_Area2D_body_entered(body):
-	if (body.get_name() == "Hornet"):
+func _on_HoneyBringer_body_entered(body):
+	if ("Hornet" in body.get_name()):
 		hide()
 		emit_signal("killed")
