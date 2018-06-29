@@ -32,3 +32,7 @@ func _on_HornetSpawn_timeout():
 
 func _on_Bee_hit():
 	pass # replace with function body
+
+
+func _on_Worker1_killed():
+	get_tree().quit()
