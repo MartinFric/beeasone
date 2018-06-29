@@ -20,8 +20,8 @@ visible = false
 
 [node name="Bee" parent="." index="2" instance=ExtResource( 4 )]
 
-[node name="Container" parent="." index="3" instance=ExtResource( 5 )]
+position = Vector2( 1167.08, 671.026 )
 
-position = Vector2( 1301.16, 513.457 )
+[node name="Container" parent="." index="3" instance=ExtResource( 5 )]
 
 

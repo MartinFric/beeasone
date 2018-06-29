@@ -9,7 +9,7 @@ func _ready():
 	#objectivePopupMenu = get_node("ObjectiveFlowersPopup")
 	#objectivePopupMenu.connect("hidden", self, "on_objectives_read")
 	#objectivePopupMenu.show()
-	pass
+	start_game()
 
 func on_objectives_read():
 	print("objectives read")
@@ -24,6 +24,7 @@ func start_game():
 	for f in flowers:
 		f.connect("collected", self, "on_collected")
 		f.start_timer()
+
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
