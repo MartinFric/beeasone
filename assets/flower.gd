@@ -41,8 +41,8 @@ func _on_collision(obj):
 	
 func check_collision():
 	if active:
-		toggle_active()
 		stopped = true
+		hide()
 		emit_signal("collected")
 
 func _on_collision_end(obj):
@@ -53,6 +53,7 @@ func _on_timeout():
 	if stopped or not started:
 		pass
 	elif colliding:
+		toggle_active()
 		check_collision()
 	else:
 		print("switch")

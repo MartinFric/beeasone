@@ -18,6 +18,7 @@ func on_objectives_read():
 func on_collected():
 	print("COLLECTED!!")
 	nectarCollected += 3
+	get_node("Score").text = String(nectarCollected)
 	
 func start_game():
 	var flowers = get_tree().get_nodes_in_group("flowers")
