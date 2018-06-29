@@ -12,8 +12,7 @@ func _ready():
 func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-	var bodies = get_colliding_bodies()
-	print(bodies)
+	pass
 	
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
