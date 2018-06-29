@@ -9,7 +9,6 @@ var colliding = false
 signal collected
 
 func _ready():
-	visible = false
 	add_to_group("flowers")
 
 func reset_timer():
@@ -29,11 +28,11 @@ func toggle_active():
 	active = not active		# TODO: change sprite
 	if active:
 		print("activating")
-		self.show()
+		get_node("Sprite").texture = load("res://assets/flowers/flower-white-active.png")
 		reset_timer()
 	else:
 		print("deactivating")
-		self.hide()
+		get_node("Sprite").texture = load("res://assets/flowers/flower-white-inactive.png")
 
 func _on_collision(obj):
 	colliding = true
