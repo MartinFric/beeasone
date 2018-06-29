@@ -1,19 +1,33 @@
 extends Node
 
+signal timerStart
+var time = 0
+var timeStarted = false
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	get_node("HornetSpawn").start()
 	randomize()
 	$HUD/Message.hide()
 	$"HUD/Try again".hide()
 	$"HUD/Menu".hide()
+	
+	$"Start dialogue".popup()
 
-#func _process(delta):
+func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-#	pass
+	
+	if timeStarted:
+		time += delta
+		emit_signal("timerStart", time)
 
+	if time > 20:
+		$HornetSpawn.wait_time = 0.4
+	
+	if time > 40:
+		$HornetSpawn.wait_time = 0.3
+	
 func _on_HornetSpawn_timeout():
     # choose a random location on Path2D
     $HornetPath/HornetSpawn.set_offset(randi())
@@ -45,3 +59,7 @@ func game_over():
 	$HUD/Message.show()
 	$"HUD/Try again".show()
 	$"HUD/Menu".show()
+
+func _on_Start_dialogue_confirmed():
+	timeStarted = true
+	get_node("HornetSpawn").start()
