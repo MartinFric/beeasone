@@ -3,8 +3,8 @@
 [ext_resource path="res://characters/Bee/Bee.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bee/up1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Bee/up2.png" type="Texture" id=3]
-[ext_resource path="res://assets/Bee/right1.png" type="Texture" id=4]
-[ext_resource path="res://assets/Bee/right2.png" type="Texture" id=5]
+[ext_resource path="res://characters/Bee/bee_model_color.png" type="Texture" id=4]
+[ext_resource path="res://characters/Bee/bee_model_color_right2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -41,8 +41,10 @@ SPEED = 400
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 0.986048, 19.8344 )
+scale = Vector2( 6, 6 )
 frames = SubResource( 1 )
-animation = "Top"
+animation = "Right"
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 

@@ -10,11 +10,13 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 0.16571, -2.1521, 0, 0, 0, 0, 993.229, -2.1521, 0, 0, 0, 0, 1922.13, -2.1521, 0, 0, 0, 0, 1925.17, 492.549, 0, 0, 0, 0, 0.443115, 489.124, 0, 0, 0, 0, 0.443115, 225.416, 0, 0, 0, 0, 0.16571, -2.1521 )
 }
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
 [node name="Bee" parent="." index="0" instance=ExtResource( 2 )]
+
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "collision" ]
 
 [node name="HornetSpawn" type="Timer" parent="." index="1"]
 
@@ -38,6 +40,7 @@ curve = SubResource( 1 )
 [node name="HornetSpawn" type="PathFollow2D" parent="HornetPath" index="0"]
 
 position = Vector2( 0.16571, -2.1521 )
+rotation = -6.09383e-008
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
