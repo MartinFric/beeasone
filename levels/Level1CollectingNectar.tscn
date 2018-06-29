@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://levels/Level1CollectingNectar.gd" type="Script" id=1]
 [ext_resource path="res://assets/flower.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/ObjectivesFlowersPopup.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/Bee/Bee.tscn" type="PackedScene" id=4]
 [ext_resource path="res://screens/TopLeftMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://screens/EndPopup.tscn" type="PackedScene" id=6]
 
 [node name="Level1" type="Node" index="0"]
 
@@ -76,5 +77,16 @@ text = "0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Timer" type="Timer" parent="." index="13"]
+
+process_mode = 1
+wait_time = 60.0
+one_shot = false
+autostart = false
+
+[node name="EndPopup" parent="." index="14" instance=ExtResource( 6 )]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
