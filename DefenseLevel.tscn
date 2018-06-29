@@ -189,7 +189,7 @@ size_flags_vertical = 1
 popup_exclusive = false
 window_title = "Alert!"
 resizable = false
-dialog_text = "Start the game"
+dialog_text = "Protect the Bees from Hornets. Click ok to Start the game"
 dialog_hide_on_ok = true
 _sections_unfolded = [ "Dialog" ]
 
@@ -236,25 +236,25 @@ _sections_unfolded = [ "Visibility" ]
 
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
-[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
-
 [connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
+
+[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
 
 [connection signal="timeout" from="HornetSpawn" to="." method="_on_HornetSpawn_timeout"]
 
 [connection signal="timeout" from="StartIn" to="." method="_on_StartIn_timeout"]
 
-[connection signal="killed" from="Gethering/HoneyBringer" to="Bee" method="_on_HoneyBringer_killed"]
-
 [connection signal="killed" from="Gethering/HoneyBringer" to="." method="_on_HoneyBringer_killed"]
 
-[connection signal="killed" from="Gethering/HoneyBringer2" to="Bee" method="_on_HoneyBringer2_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer" to="Bee" method="_on_HoneyBringer_killed"]
 
 [connection signal="killed" from="Gethering/HoneyBringer2" to="." method="_on_HoneyBringer2_killed"]
 
-[connection signal="killed" from="Gethering/HoneyBringer3" to="Bee" method="_on_HoneyBringer3_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer2" to="Bee" method="_on_HoneyBringer2_killed"]
 
 [connection signal="killed" from="Gethering/HoneyBringer3" to="." method="_on_HoneyBringer3_killed"]
+
+[connection signal="killed" from="Gethering/HoneyBringer3" to="Bee" method="_on_HoneyBringer3_killed"]
 
 [connection signal="confirmed" from="Start dialogue" to="." method="_on_Start_dialogue_confirmed"]
 

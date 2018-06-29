@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://screens/TopLeftMenu.gd" type="Script" id=1]
 [ext_resource path="res://images/menu/burger_menu.png" type="Texture" id=2]
 [ext_resource path="res://images/menu/burger_menu-hover.png" type="Texture" id=3]
 [ext_resource path="res://images/menu/globe.png" type="Texture" id=4]
 [ext_resource path="res://images/menu/globe_hover.png" type="Texture" id=5]
+[ext_resource path="res://characters/Guard/bee_model_security_right.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -245,6 +246,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
+texture_normal = ExtResource( 6 )
 expand = true
 _sections_unfolded = [ "Textures" ]
 
@@ -260,6 +262,8 @@ autostart = false
 [connection signal="pressed" from="Menu/MenuTexture" to="." method="_on_MenuTexture_pressed"]
 
 [connection signal="pressed" from="Map/MapTexture" to="." method="_on_Map_pressed"]
+
+[connection signal="pressed" from="Guards2" to="." method="_on_Guards2_pressed"]
 
 [connection signal="timeout" from="GuardsDuration" to="." method="_on_GuardsDuration_timeout"]
 
