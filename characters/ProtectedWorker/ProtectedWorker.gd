@@ -14,6 +14,6 @@ func _ready():
 #	pass
 
 func _on_HoneyBringer_body_entered(body):
-	#if ("Hornet" in body.get_name()):
-	hide()
-	emit_signal("killed")
+	if ("Hornet" in body.get_name()):
+		hide()
+		emit_signal("killed")

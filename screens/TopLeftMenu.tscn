@@ -35,7 +35,7 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[node name="LeftMenu" type="Container"]
+[node name="LeftMenu" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -103,6 +103,7 @@ _sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="Map" type="Button" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -251,10 +252,19 @@ texture_normal = ExtResource( 6 )
 expand = true
 _sections_unfolded = [ "Textures" ]
 
+[node name="GuardsDuration" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 7.0
+one_shot = false
+autostart = false
+
 [connection signal="mouse_entered" from="Menu" to="." method="_on_menu_mouse_entered"]
 
 [connection signal="pressed" from="Menu/MenuTexture" to="." method="_on_MenuTexture_pressed"]
 
 [connection signal="pressed" from="Guards2/Guards" to="." method="_on_Guards_pressed"]
+
+[connection signal="timeout" from="GuardsDuration" to="." method="_on_GuardsDuration_timeout"]
 
 

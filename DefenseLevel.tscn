@@ -193,6 +193,8 @@ _sections_unfolded = [ "Dialog" ]
 
 [connection signal="callGuards" from="Container" to="." method="_on_Container_callGuards"]
 
+[connection signal="releaseGuards" from="Container" to="." method="_on_Container_releaseGuards"]
+
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
 [connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]

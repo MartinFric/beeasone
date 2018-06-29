@@ -4,6 +4,7 @@ extends Container
 # var a = 2
 # var b = "textvar"
 signal callGuards
+signal releaseGuards
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -31,3 +32,8 @@ func _on_Node_timerStart(time):
 
 func _on_Guards_pressed():
 	emit_signal("callGuards")
+	$Guards2.hide()
+	$GuardsDuration.start()
+
+func _on_GuardsDuration_timeout():
+	emit_signal("releaseGuards")

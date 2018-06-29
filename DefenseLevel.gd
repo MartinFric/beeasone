@@ -5,6 +5,11 @@ signal timerStart
 var time = 0
 var timeStarted = false
 
+var guard
+var guard2
+var guard3
+var guard4
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -70,7 +75,27 @@ func _on_Start_dialogue_confirmed():
 	get_node("HornetSpawn").start()
 
 func _on_Container_callGuards():
-	var guard = guard_class.instance()
-	var pos = Vector2(350, 300)
-	guard.position = pos
+	guard = guard_class.instance()
+	guard2 = guard_class.instance()
+	guard3 = guard_class.instance()
+	guard4 = guard_class.instance()
+	
+	guard.position = Vector2(350, 300)
+	guard2.position = Vector2(750, 300)
+	guard3.position = Vector2(1150, 300)
+	guard4.position = Vector2(1550, 300)
+	
 	add_child(guard)
+	add_child(guard2)
+	add_child(guard3)
+	add_child(guard4)
+
+func _on_Container_releaseGuards():
+	if guard != null:
+		guard.queue_free()
+	if guard2 != null:
+		guard2.queue_free()
+	if guard3 != null:
+		guard3.queue_free()
+	if guard4 != null:
+		guard4.queue_free()
