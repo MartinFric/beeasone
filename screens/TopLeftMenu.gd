@@ -24,4 +24,6 @@ func _on_MenuTexture_pressed():
 
 
 func _on_Bee_recovery(recoveryState):
+	if recoveryState > 2.95:
+		recoveryState = 3 
 	$ProgressBar.value = recoveryState
