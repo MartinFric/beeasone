@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/queen.png-28099ddf1158a7f997bf79d0f28e193c.stex"
+path="res://.import/queen.png-b0ac1e266c642254cf1ace769314b312.stex"
 
 [deps]
 
-source_file="res://Assets/queen.png"
-dest_files=[ "res://.import/queen.png-28099ddf1158a7f997bf79d0f28e193c.stex" ]
+source_file="res://assets/queen.png"
+dest_files=[ "res://.import/queen.png-b0ac1e266c642254cf1ace769314b312.stex" ]
 
 [params]
 

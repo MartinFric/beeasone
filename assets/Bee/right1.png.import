@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/right1.png-72500bb5e4490d89c7b7befa369af523.stex"
+path="res://.import/right1.png-11680d3f83010522e399eae305e9b8d0.stex"
 
 [deps]
 
-source_file="res://Assets/Bee/right1.png"
-dest_files=[ "res://.import/right1.png-72500bb5e4490d89c7b7befa369af523.stex" ]
+source_file="res://assets/Bee/right1.png"
+dest_files=[ "res://.import/right1.png-11680d3f83010522e399eae305e9b8d0.stex" ]
 
 [params]
 
