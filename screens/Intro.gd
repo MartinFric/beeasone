@@ -7,7 +7,7 @@ extends Node
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	get_node("Timer").start()
+	pass
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -17,3 +17,7 @@ func _ready():
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://levels/Level1CollectingNectar.tscn")
+
+
+func _on_Button_pressed():
+		get_tree().change_scene("res://screens/Map.tscn")

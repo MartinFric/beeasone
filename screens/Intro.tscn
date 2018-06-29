@@ -1,25 +1,85 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://screens/Intro.gd" type="Script" id=1]
-[ext_resource path="res://Assets/story.png" type="Texture" id=2]
+[ext_resource path="res://fonts/orangeFont.tres" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 60
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 60
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="story" type="Sprite" parent="." index="0"]
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
 
-position = Vector2( 985.306, 456.83 )
-scale = Vector2( 2.1223, 3.78418 )
-texture = ExtResource( 2 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 235.0
+margin_top = 73.0
+margin_right = 1733.0
+margin_bottom = 628.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "You and your other bee friends are fed up with the dictatorial Queen, who oppresses all of her servants by making impossible requests on a whim. You took it upon yourselves to help others with their tasks and ease their suffering."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="Timer" type="Timer" parent="." index="1"]
+[node name="Button" type="Button" parent="." index="1"]
 
-process_mode = 1
-wait_time = 0.2
-one_shot = false
-autostart = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 696.0
+margin_top = 766.0
+margin_right = 1109.0
+margin_bottom = 832.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Go to Hive View"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 
 
