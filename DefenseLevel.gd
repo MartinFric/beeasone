@@ -1,5 +1,6 @@
 extends Node
 
+onready var guard_class = load("res://characters/Guard/Guard.tscn")
 signal timerStart
 var time = 0
 var timeStarted = false
@@ -36,14 +37,13 @@ func _process(delta):
 func _on_HornetSpawn_timeout():
     # choose a random location on Path2D
     $HornetPath/HornetSpawn.set_offset(randi())
-    # create a Mob instance and add it to the scene
+    # create a Hornet instance and add it to the scene
     var hornet = preload("res://characters/Hornet/Hornet.tscn").instance()
 	
-	
     add_child(hornet)
-    # set the mob's direction perpendicular to the path direction
+    # set the hornet's direction perpendicular to the path direction
     var direction = $HornetPath/HornetSpawn.rotation + PI/2
-    # set the mob's position to a random location
+    # set the hornet's position to a random location
     hornet.position = $HornetPath/HornetSpawn.position
     # add some randomness to the direction
     direction += rand_range(-PI/4, PI/4)
@@ -68,3 +68,9 @@ func game_over():
 func _on_Start_dialogue_confirmed():
 	timeStarted = true
 	get_node("HornetSpawn").start()
+
+func _on_Container_callGuards():
+	var guard = guard_class.instance()
+	var pos = Vector2(350, 300)
+	guard.position = pos
+	add_child(guard)

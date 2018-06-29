@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://screens/TopLeftMenu.gd" type="Script" id=1]
 [ext_resource path="res://images/menu/burger_menu.png" type="Texture" id=2]
 [ext_resource path="res://images/menu/burger_menu-hover.png" type="Texture" id=3]
 [ext_resource path="res://images/menu/globe.png" type="Texture" id=4]
 [ext_resource path="res://images/menu/globe_hover.png" type="Texture" id=5]
+[ext_resource path="res://characters/Guard/bee_model_security_right.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -34,7 +35,7 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[node name="LeftMenu" type="Container" index="0"]
+[node name="LeftMenu" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -52,6 +53,7 @@ script = ExtResource( 1 )
 
 [node name="Menu" type="Button" parent="." index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -182,10 +184,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 568.0
-margin_top = 3.0
-margin_right = 913.0
-margin_bottom = 51.0
+margin_left = 550.0
+margin_top = 6.0
+margin_right = 895.0
+margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -201,8 +203,59 @@ exp_edit = false
 rounded = false
 percent_visible = true
 
+[node name="Guards2" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 943.0
+margin_top = 4.0
+margin_right = 1086.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Guards" type="TextureButton" parent="Guards2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 21.0
+margin_top = 6.0
+margin_right = 117.0
+margin_bottom = 58.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+expand = true
+_sections_unfolded = [ "Textures" ]
+
 [connection signal="mouse_entered" from="Menu" to="." method="_on_menu_mouse_entered"]
 
 [connection signal="pressed" from="Menu/MenuTexture" to="." method="_on_MenuTexture_pressed"]
+
+[connection signal="pressed" from="Guards2/Guards" to="." method="_on_Guards_pressed"]
 
 

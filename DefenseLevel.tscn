@@ -68,6 +68,8 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Gethering" type="Node" parent="." index="5"]
 
+editor/display_folded = true
+
 [node name="flower-blue" type="Sprite" parent="Gethering" index="0"]
 
 position = Vector2( 273.435, 862.946 )
@@ -189,6 +191,8 @@ _sections_unfolded = [ "Dialog" ]
 
 [connection signal="timerStart" from="." to="Container" method="_on_Node_timerStart"]
 
+[connection signal="callGuards" from="Container" to="." method="_on_Container_callGuards"]
+
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
 [connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
@@ -199,17 +203,17 @@ _sections_unfolded = [ "Dialog" ]
 
 [connection signal="timeout" from="StartIn" to="." method="_on_StartIn_timeout"]
 
-[connection signal="killed" from="Gethering/HoneyBringer" to="Bee" method="_on_HoneyBringer_killed"]
-
 [connection signal="killed" from="Gethering/HoneyBringer" to="." method="_on_HoneyBringer_killed"]
 
-[connection signal="killed" from="Gethering/HoneyBringer2" to="Bee" method="_on_HoneyBringer2_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer" to="Bee" method="_on_HoneyBringer_killed"]
 
 [connection signal="killed" from="Gethering/HoneyBringer2" to="." method="_on_HoneyBringer2_killed"]
 
-[connection signal="killed" from="Gethering/HoneyBringer3" to="Bee" method="_on_HoneyBringer3_killed"]
+[connection signal="killed" from="Gethering/HoneyBringer2" to="Bee" method="_on_HoneyBringer2_killed"]
 
 [connection signal="killed" from="Gethering/HoneyBringer3" to="." method="_on_HoneyBringer3_killed"]
+
+[connection signal="killed" from="Gethering/HoneyBringer3" to="Bee" method="_on_HoneyBringer3_killed"]
 
 [connection signal="confirmed" from="Start dialogue" to="." method="_on_Start_dialogue_confirmed"]
 
