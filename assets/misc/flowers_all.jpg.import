@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flowers_all.jpg-9fe81c502b1d3658540de3b0ccac4a78.stex"
+path="res://.import/flowers_all.jpg-63fe5417be1aea09edac5c6bf0b101f7.stex"
 
 [deps]
 
-source_file="res://assets/misc/flowers_all.jpg"
-dest_files=[ "res://.import/flowers_all.jpg-9fe81c502b1d3658540de3b0ccac4a78.stex" ]
+source_file="res://Assets/misc/flowers_all.jpg"
+dest_files=[ "res://.import/flowers_all.jpg-63fe5417be1aea09edac5c6bf0b101f7.stex" ]
 
 [params]
 
