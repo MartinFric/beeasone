@@ -82,6 +82,7 @@ func _on_Start_dialogue_confirmed():
 	get_node("HornetSpawn").start()
 
 func _on_Container_callGuards():
+	print("jijij")
 	guard = guard_class.instance()
 	guard2 = guard_class.instance()
 	guard3 = guard_class.instance()
