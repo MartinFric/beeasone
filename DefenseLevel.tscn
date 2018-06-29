@@ -24,7 +24,7 @@ script = ExtResource( 1 )
 [node name="Container" parent="." index="0" instance=ExtResource( 2 )]
 
 margin_left = 380.0
-margin_top = 242.0
+margin_top = 237.0
 margin_right = 420.0
 margin_bottom = 282.0
 
@@ -117,6 +117,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Try again" type="TextureButton" parent="HUD" index="0"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -139,6 +140,7 @@ group = null
 
 [node name="Menu" type="TextureButton" parent="HUD" index="1"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -161,22 +163,22 @@ group = null
 
 [node name="Failed" type="Sprite" parent="HUD" index="2"]
 
+visible = false
 position = Vector2( 946.423, 572.133 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Start dialogue" type="AcceptDialog" parent="." index="7"]
 
-visible = false
 light_mask = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 707.0
-margin_top = 315.0
-margin_right = 1427.0
-margin_bottom = 697.0
+margin_top = 358.0
+margin_right = 1150.0
+margin_bottom = 450.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -192,11 +194,35 @@ _sections_unfolded = [ "Dialog" ]
 
 [node name="Sprite" type="Sprite" parent="." index="8"]
 
-position = Vector2( 959.735, 534.598 )
+position = Vector2( 959.735, 531.808 )
 scale = Vector2( 1.67673, 1.38509 )
 z_index = -1
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Win dialogue" type="AcceptDialog" parent="." index="9"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 380.0
+margin_top = 237.0
+margin_right = 463.0
+margin_bottom = 295.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Alert!"
+resizable = false
+dialog_text = "You have WON!"
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog" ]
 
 [connection signal="timerStart" from="." to="Container" method="_on_Node_timerStart"]
 
@@ -206,9 +232,9 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="hit" from="Bee" to="." method="_on_Bee_hit"]
 
-[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
-
 [connection signal="recovery" from="Bee" to="." method="_on_Bee_recovery"]
+
+[connection signal="recovery" from="Bee" to="Container" method="_on_Bee_recovery"]
 
 [connection signal="timeout" from="HornetSpawn" to="." method="_on_HornetSpawn_timeout"]
 
