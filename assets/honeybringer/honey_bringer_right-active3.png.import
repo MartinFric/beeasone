@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/honey_bringer_right-active3.png-b31652743f7314d4826c0e760f015488.stex"
+path="res://.import/honey_bringer_right-active3.png-b3bae8455c243c6e4dee0eef6dae6f03.stex"
 
 [deps]
 
-source_file="res://Assets/honeybringer/honey_bringer_right-active3.png"
-dest_files=[ "res://.import/honey_bringer_right-active3.png-b31652743f7314d4826c0e760f015488.stex" ]
+source_file="res://assets/honeybringer/honey_bringer_right-active3.png"
+dest_files=[ "res://.import/honey_bringer_right-active3.png-b3bae8455c243c6e4dee0eef6dae6f03.stex" ]
 
 [params]
 

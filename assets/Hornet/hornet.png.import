@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hornet.png-ee2efc786535f0be8d8e388543f0743a.stex"
+path="res://.import/hornet.png-e61cab4fac3b4c6a4d7e47dd6977df9d.stex"
 
 [deps]
 
-source_file="res://Assets/Hornet/hornet.png"
-dest_files=[ "res://.import/hornet.png-ee2efc786535f0be8d8e388543f0743a.stex" ]
+source_file="res://assets/Hornet/hornet.png"
+dest_files=[ "res://.import/hornet.png-e61cab4fac3b4c6a4d7e47dd6977df9d.stex" ]
 
 [params]
 
