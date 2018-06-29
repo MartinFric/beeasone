@@ -64,6 +64,8 @@ frames = SubResource( 2 )
 animation = "Right"
 flip_h = true
 
+[connection signal="body_entered" from="." to="." method="_on_Hornet_body_entered"]
+
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
 
 

@@ -3,6 +3,7 @@ extends Container
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+signal callGuards
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -27,3 +28,6 @@ func _on_Bee_recovery(recoveryState):
 
 func _on_Node_timerStart(time):
 	$Timer.value = time
+
+func _on_Guards_pressed():
+	emit_signal("callGuards")
